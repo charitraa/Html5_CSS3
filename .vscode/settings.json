@@ -1,3 +1,4 @@
 {
-    "livePreview.defaultPreviewPath": "d:\\html5\\book.html"
+    "livePreview.defaultPreviewPath": "d:\\html5\\book.html",
+    "C_Cpp.errorSquiggles": "disabled"
 }
