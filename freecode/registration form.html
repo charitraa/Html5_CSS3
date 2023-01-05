@@ -87,12 +87,48 @@
             color: #dfdfe2
         }
     </style>
+
+    <script type="text/javascript">
+        function validform() {
+            document.getElementById(form1).onsubmit = function () {
+                var first_name = document.getElementById('first-name').value;
+                var last_name = document.getElementById('last-name').value;
+                var x = document.getElementById('email').value;
+                var password = document.getElementById('new-password').value;
+                var age = document.getElementById('age').value;
+                var atpos = x.lastOf('@');
+                var dotpos = x.lastIndexOf('.');
+
+                if (first_name == '') {
+                    alert('please enter your first-name');
+                }
+                else if (last_name == '') {
+                    alert('please enter your last-name')
+                }
+                else if (document.getElementById('email').value == '') {
+                    alert('please enter your email')
+                }
+                else if (password == '') {
+                    alert('please enter your password')
+                    return false;
+                }
+                else if (password.length < 6) {
+                    alert('password too small')
+
+                }
+                else if (age == '') {
+                    alert('please enter your age')
+                    return false;
+                }
+            }
+        }
+    </script>
 </head>
 
 <body>
     <h1>Registration Form</h1>
     <p>Please fill out this form with the required information</p>
-    <form method="post" action='https://register-demo.freecodecamp.org'>
+    <form method="post" action='https://register-demo.freecodecamp.org' id="form1">
         <fieldset>
             <label for="first-name">Enter Your First Name: <input id="first-name" name="first-name" type="text"
                     required /></label>
