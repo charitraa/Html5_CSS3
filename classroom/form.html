@@ -9,14 +9,14 @@
     <script type="text/javascript">
         function validateform() {
             var name = document.myform.name.value;
-            var password = document.myform.Password.value;
+            var password = document.myform.password.value;
 
             if (name == null || name == '') {
                 alert('Name cannot be blank');
                 return false;
             }
             else if (password.length < 6) {
-                alert("password must be at lest 6 character long");
+                alert("password must be at lest 6 character long.");
                 return false;
             }
         }
@@ -25,7 +25,7 @@
 
 <body>
     <form name="myform" action="#" method="post" onsubmit="return validateform()">
-        Name: <input type="text" name="name"><br>
+        Name: <input type="text" name="name" id="name"><br>
         Password:<input type="password" id="pass" name="password"><br>
         <input type="submit" value="register">
     </form>
