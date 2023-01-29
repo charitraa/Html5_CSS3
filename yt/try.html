@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Game using react</title>
+    <!-- ---------------------script--------------------- -->
+
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+</head>
+<!---------------------- style----------------------->
+
+<style>
+    .incorrect {
+        color: red;
+    }
+</style>
+<!-- ---------------------body starts--------------------- -->
+
+<body>
+    <div id="app"></div>
+    <!-- ---------------------react code --------------------- -->
+
+    <script type="text/babel">
+        class App extends React.Component {
+            constructor(props) {
+                super(props);
+                this.state = {
+                    num1: 1 + Math.ceil(Math.random() * 10),
+                    num2: 1 + Math.ceil(Math.random() * 10),
+                    score: 0,
+                    response: "",
+                    incorrect: false,
+                };
+            }
+
+            //MAIN RENDER
+            render() {
+                if (this.state.score > 9) {
+                    return this.renderWin();
+                } else {
+                    return this.renderSolve();
+                }
+            }
+
+            //QUESTION RENDERING
+            renderSolve() {
+                return (
+                    <div>
+                        <h2>Score upto 10 to win the game!!!!</h2>
+                        <h1 className={this.state.incorrect ? "incorrect" : ""}>
+                            {this.state.num1} + {this.state.num2}
+                        </h1>
+                        <input
+                            onKeyPress={this.keyPressed}
+                            onChange={this.updateResponse}
+                            value={this.state.response}
+                        />
+                        <div>score : {this.state.score}</div>
+                    </div>
+                );
+            }
+
+            //AFETR WINNNG
+            renderWin() {
+                return <h1>Congratulations!!! , You win!!!!!</h1>;
+            }
+
+            //UPDATING THE INPUT FIELD TO TYPE
+            updateResponse = (event) => {
+                this.setState({
+                    response: event.target.value,
+                });
+            };
+
+            //PRESS ENTER TO CHECK WHETHER THE ANS IS CORRECT OR NOT
+            keyPressed = (event) => {
+                if (event.key === "Enter") {
+                    const answer = parseInt(this.state.response);
+                    if (answer == this.state.num1 + this.state.num2) {
+                        // answer is right
+                        this.setState((state) => ({
+                            score: state.score + 2,
+                            num1: Math.ceil(Math.random() * 10),
+                            num2: Math.ceil(Math.random() * 10),
+                            response: "",
+                            incorrect: false,
+                        }));
+                    } else {
+                        //answer is wrong
+                        this.setState((state) => ({
+                            response: "",
+                            incorrect: true,
+                        }));
+                    }
+                }
+            };
+        }
+
+        //MIAN RENDERING FROM  DIV WHOSE ID IS App
+        ReactDOM.render(<App />, document.querySelector("#app"));
+    </script>
+    <!-- --------------------- body ends--------------------- -->
+</body>
+
+</html>
