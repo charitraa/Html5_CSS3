@@ -1,0 +1,52 @@
+* {
+    background-color: rgb(14, 6, 38);
+}
+
+h2 {
+    color: white;
+    font-size: 35px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+}
+
+span {
+    color: red;
+}
+
+div.ooo {
+    width: 900px;
+    color: aliceblue;
+    display: flex;
+}
+
+div img {
+    margin-top: 40px;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    margin-left: 50px;
+}
+
+div.b {
+    margin-left: 0px;
+    width: 255%;
+    color: rgb(0, 0, 0);
+    background-color: rgb(251, 251, 251);
+    display: inline-block;
+    height: 500px;
+}
+
+.b h2 {
+    color: rgb(255, 255, 255);
+    margin-left: 31px;
+    margin-top: 2px;
+}
+
+.b h4 {
+    color: rgb(255, 255, 255);
+    margin-right: 20px;
+    text-align: center;
+}
+

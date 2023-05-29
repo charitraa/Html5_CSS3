@@ -1,0 +1,347 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+header{
+  /* border: 2px solid black; */
+  position: sticky;
+  margin-top: 0;
+  padding: 15px;
+  color:white;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(38, 36, 36);
+}
+.logo h1{
+  /* border: 2px solid black; */
+  font-family: sans-serif;
+}
+
+.nav ul{
+  /* border: 2px solid black; */
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin: top 10px;
+}
+.nav ul li{
+  margin-right: 15px;
+}
+.nav ul li a {
+  font-family:serif;
+  font-weight: bold;
+  font-size: x-large;
+  text-decoration: none;
+  color: #e0e4e4;
+  position: relative;
+}
+      /* used to underline the word when touched with the pointer transition after */
+.nav ul li a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -2px;
+  background-color: aliceblue;
+  left: 0;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out;
+}
+  /* hover is used */
+.nav ul li a:hover::after {
+  visibility: visible;
+  transform: scaleX(1);
+}
+
+/* css to style Login */
+
+.nav .btnLogin-popup{
+  width: 120px;
+  height: 40px;
+  background: transparent;
+  border: 2px solid #fff;
+  outline: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1.1em;
+  color: #fff;
+  font-weight: 300;
+  margin-left: 40px;
+  transition: 0.5s;
+}
+
+.nav .btnLogin-popup:hover{
+  background: #9c8f8f;
+  color: #162938;
+}
+/* css to style login finished */
+
+    /* CSS  for Login (Popup when clicked) */
+    .overlay{
+      position:relative;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #3e5160;
+      display: none;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .login-popup{
+      background-color: #8b8b8b;
+      padding: 20px;
+      max-width: 400px;
+      text-align: center;
+    }
+
+    .login-popup h2{
+      margin-bottom: 20px;
+    }
+
+    .login-popup form {
+      margin-bottom: 20px;
+    }
+    .login-popup label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .login-popup input{
+      width: 100%;
+      padding: 5px;
+      margin-bottom: 10px;
+    }
+
+    .login-popup button{
+      padding: 10px 18px;
+      margin-top: 3PX;
+      border: none;
+      border-radius: 4px;
+    }
+
+    .btnClose-popup{
+      background-color: #a77373;
+      border: none;
+      padding: 5px 10px;
+      cursor: pointer;
+    }
+
+
+
+
+
+body{
+margin: 0;
+padding: 0;
+height: 100vh;
+justify-content: center;
+align-items: center;
+background: #292528bd;
+}
+
+/* Slider starts from here */
+.slider-container {
+  position: relative;
+  width: 100%;
+  height: 570px;
+  overflow: hidden;
+  padding-top: 10px;
+}
+
+.slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 300%;
+  height: 100%;
+  display: flex;
+  transition: all 0.5s ease-in-out;
+}
+.slider img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.buttons {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.buttons button {
+  padding: 10px 20px;
+  margin: 0 10px;
+  background-color: #423838;
+  border: none;
+  border-radius: 5px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.prev {
+  visibility: hidden;
+}
+
+.slider-container:hover .prev {
+  visibility: visible;
+}
+
+.slider-container:hover .next {
+  visibility: visible;
+}
+
+.slider-container:hover .slider {
+  transform: translateX(-33.33%);
+}
+
+.slider-container:hover .slider img:last-child {
+  transform: translateX(00%);
+}
+/* Slideshow ends */
+
+  /* Introduction part starts */
+ 
+.intro{
+  text-align: center;
+  margin-top: 15px;
+  text-decoration: none;
+  background-color:#897a7a52;
+  font-family:Arial, Helvetica, sans-serif;
+  margin: 20px;
+}
+    
+.intro h2{
+  text-decoration:none;
+  font-size:30px;
+}
+.intro p{
+  letter-spacing: 2px;
+  font-family:sans-serif;
+}
+
+  /* Images of slideshow details */
+ 
+.sliderProducts{
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+
+}
+
+.product{
+  display: inline-block;
+  width: 200px;
+  margin: 12px;
+  text-align: center;
+  padding: 10px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border: 2px solid rgb(47, 38, 38);
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.product:hover{
+  transform: translateY(-5px);
+}
+
+.product img{
+  display: inline-block;
+  width: 200px;
+  height: auto;
+  margin-bottom: 18px;
+}
+
+.product h3{
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.product p{
+  font-size: 17px;
+  color: rgba(208, 185, 188, 0.571);
+  transition: color 0.5s ease-in-out ;
+}
+
+.product:active{
+  box-shadow: none;
+}
+
+/*------------------------------------------------------------ footer css */
+footer{
+  background-color: #000000;
+  color: #000105f4;
+  padding: 20px 0;
+}
+
+.footerContent{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.footerLogo h2 {
+    font-size: 24px;
+    font-weight: bold;
+}
+.footer-link ul{
+  list-style: none;
+  display: flex;
+  
+
+}
+
+.footer-link ul li{
+  margin-right: 50px;
+  font-weight: 20px;
+}
+
+.footer-link ul li a {
+  color: #b89a9a;
+  text-decoration: none;
+  position: relative;
+  transition: color o.3s ease-in-out;
+}
+.footer-link ul li a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -2px;
+  background-color: #487b9ba5;
+  left: 0;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out;
+
+}
+
+.footer-link ul li a:hover::after {
+  visibility: visible;
+  transform: scaleX(1);
+}
+.footer-bottom {
+  text-align: center;
+  transition: opacity 0.3s ease-in-out;
+}
+.footer-bottom:hover {
+  opacity: 0.8;
+}
+
+
+
+
+
+
+
+
+
+
+
+

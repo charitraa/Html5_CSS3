@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="Image.css">
+
+  <title>Camhub</title>
+  <!-- main body -->
+
+<body>
+  <!-- header starts -->
+  <header>
+
+    <!-- div tag -->
+    <div class="logo">
+      <h1>Camhub</h1>
+    </div>
+    <div class="nav">
+
+      <nav>
+        <ul>
+          <li><a href="image.html">Home</a></li>
+          <li><a href="newproduct.html">Products</a></li>
+          <li><a href="research.html">Research</a></li>
+          <li><a href="1.html">Blog</a></li>
+          <li><a href="about us.html">About Us</a></li>
+          <li><button class="btnLogin-popup">Login</button></li>
+        </ul>
+        <!-- <button class="btnLogin-popup">Login</button> -->
+        <!-- Sign in option is not written -->
+      </nav>
+    </div>
+  </header>
+  <!-- header ends -->
+
+
+  <!-- div for login -->
+
+  <div class="overlay">
+    <div class="login-popup">
+      <h2>Login</h2>
+      <form action="">
+        <!-- for username -->
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username">
+        <!-- for password -->
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password">
+        <!-- for button login -->
+        <button class="btnLogin">Login</button>
+
+      </form>
+      <button class="btnClose-popup">Close</button>
+    </div>
+  </div>
+
+
+  <!-- js for login -->
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const btnLogin = document.querySelector(".btnLogin-popup");
+      const overlay = document.querySelector(".overlay");
+      const btnClose = document.querySelector(".btnClose-popup");
+
+      btnLogin.addEventListener("click", function () {
+        overlay.style.display = "flex";
+      });
+
+      btnClose.addEventListener("click", function () {
+        overlay.style.display = "none";
+      });
+    });
+  </script>
+
+
+  <!-- div for Image slider -->
+
+
+  <div class="slider-container">
+
+    <div class="slider">
+      <img src="1.jpg" alt="Image 1">
+      <img src="7.jpg" alt="Image 2">
+      <img src="8.jpg" alt="Image 3">
+
+
+    </div>
+    <!-- div for button -->
+    <div class="buttons">
+      <button class="prev">Prev</button>
+      <button class="next">Next</button>
+    </div>
+  </div>
+  <!-- Js used for Image slider -->
+  <script>
+    const prevBtn = document.querySelector('.prev');
+    const nextBtn = document.querySelector('.next');
+    const slider = document.querySelector('.slider');
+
+    let counter = 1;
+    const size = slider.clientWidth / 3;
+
+    slider.style.transform = 'translateX(' + (-size * counter) + 'px)';
+
+    nextBtn.addEventListener('click', () => {
+      if (counter >= slider.children.length - 1) return;
+      slider.style.transition = 'transform 0.5s ease-in-out';
+      counter++;
+      slider.style.transform = 'translateX(' + (-size * counter) + 'px)';
+    });
+
+    prevBtn.addEventListener('click', () => {
+      if (counter <= 0) return;
+      slider.style.transition = 'transform 0.5s ease-in-out';
+      counter--;
+      slider.style.transform = 'translateX(' + (-size * counter) + 'px)';
+    });
+
+    slider.addEventListener('transitionend', () => {
+      if (slider.children[counter].id === 'last-clone') {
+        slider.style.transition = 'none';
+        counter = slider.children.length - 2;
+        slider.style.transform = 'translateX(' + (-size * counter) + 'px)';
+      }
+      if (slider.children[counter].id === 'first-clone') {
+        slider.style.transition = 'none';
+        counter = slider.children.length - counter;
+        slider.style.transform = 'translateX(' + (-size * counter) + 'px)';
+      }
+    });
+
+
+
+
+  </script>
+
+
+  <!-- Introducution part -->
+
+  <div class="intro">
+    <h2>Camhub</h2>
+    <p>Capturing moments, preserving memories. Explore our guide to camera equipment for your photography needs.</p>
+  </div>
+
+
+
+  <div class="sliderProducts">
+    <h2>Featured Products</h2>
+
+    <div class="product">
+      <img src="6.jpg" alt="Product 1">
+      <h3>Vintage Lens </h3>
+      <p>Price: Rs 9000</p>
+    </div>
+
+    <div class="product">
+      <img src="7.jpg" alt="Product 2">
+      <h3>Panasonic Lumix GH6 </h3>
+      <p>Price: Rs 97099</p>
+    </div>
+
+    <div class="product">
+      <img src="8.jpg" alt="Product 3">
+      <h3>Canon EOS R5</h3>
+      <p>Price: 24999</p>
+    </div>
+  </div>
+  <!-- footer -->
+  <footer>
+    <div class="foot">
+      <div class="footerContent">
+        <div class="footerLogo">
+          <h2>Camhub</h2>
+        </div>
+        <div class="footer-link">
+          <ul>
+            <li><a href="image.html">Home</a></li>
+            <li><a href="">Products</a></li>
+            <li><a href="">Blog</a></li>
+            <li><a href="about us.html">About Us</a></li>
+
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2023 Camhub. All rights reserved</p>
+      </div>
+    </div>
+  </footer>
+  <!-- footer ends -->
+
+
+
+
+
+
+  <!-- <script src="Image.js"></script> -->
+</body>
+
+</html>
