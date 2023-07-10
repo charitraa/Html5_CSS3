@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+html,body{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 300;
+    line-height: 1.4;
+    scroll-behavior: smooth;
+
+}
+a{
+    text-decoration: none;
+    
+}
+body{
+    display: flex;
+
+}
+header{
+    border: 1px;
+    height: 100vh;
+
+
+}
+nav h1{
+    font-size: 20px;
+    font-weight: 300;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+
+}
+nav ul {
+    list-style:none ;
+}
+nav ul li{
+    border-bottom: 1px solid #ccc;
+padding: 10px;
+color: black;
+
+}
+nav ul li:hover{
+    background: #ccc;
+    transition: 0.3s ease-in-out;
+}
