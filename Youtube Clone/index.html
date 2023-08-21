@@ -12,35 +12,53 @@
         }
 
         .search-bar {
-            font-size: 20px;
-            margin-left: 12px;
+            display: block;
         }
 
         .title {
-            display: 300px;
+            width: 300px;
         }
 
-        .author {}
-
-        .veiw {}
+        .video {
+            width: 300px;
+            display: inline-block;
+            vertical-align: top;
+            margin-right: 10px;
+        }
     </style>
 </head>
 
 
 <body>
-    <input type="text" placeholder="Search">
-    <img class="thumbnail" src="Thumbnail/hq720.webp" alt="">
+    <input class="search-bar" type="text" placeholder="Search">
+    <div class="video">
+        <div><img class="thumbnail" src="Thumbnail/hq720.webp" alt=""></div>
+        <div>
+            <p class="title">
+                Introduction to OOPs in Python | Python Tutorial - Day #56
+            </p>
+            <p class="author">
+                CodeWithHarry
+            </p>
+            <p class="veiw">
+                65K views &#183 7 months ago
+            </p>
+        </div>
+    </div>
+    <div class="video">
 
-    <p class="title">
-        Introduction to OOPs in Python | Python Tutorial - Day #56
-    </p>
-    <p class="author">
-        CodeWithHarry
-    </p>
-    <p class="veiw">
-        65K views &#183 7 months ago
-    </p>
+        <img class="thumbnail" src="Thumbnail/hq720 (1).webp" alt="">
 
+        <p class="title">
+            Sia - Snowman (Lyrics)
+        </p>
+        <p class="author">
+            LyricsWaves
+        </p>
+        <p class="veiw">
+            16K views &#183 7 days ago
+        </p>
+    </div>
 </body>
 
 </html>
