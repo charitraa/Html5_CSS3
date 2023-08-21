@@ -8,73 +8,25 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            background-color: black;
-        }
-
-        p {
-            font-family: Roboto, Arial;
-            margin-top: 0;
-            margin-bottom: 0;
-        }
-
-        .thumbnail {
-            width: 100%;
-        }
-
-        .search-bar {
-            display: block;
-            background-color: black;
-            color: white;
-            font-size: 15px;
-        }
-
-        .title {
-            margin-top: 0;
-            font-size: 14px;
-            font-weight: 600;
-            line-height: 20px;
-            margin-bottom: 15px;
-            color: rgb(232, 231, 231);
-        }
-
-        .channel-picture img {
-            width: 40px;
-            border-radius: 50%;
-        }
-
-        .thumb {
-            margin-bottom: 12px;
-        }
-
-        .author {
-            font-size: 12px;
-            color: #AAAAAA;
-            margin-bottom: 4px;
-        }
-
-        .veiw {
-            font-size: 12px;
-            color: #AAAAAA
-        }
-
-        .video-info {
-            display: grid;
-            grid-template-columns: 50px 1fr;
-        }
-
-        .container {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            column-gap: 16px;
-            row-gap: 40px;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <input class="search-bar" type="text" placeholder="Search">
+    <div class="header">
+
+        <div class="left-section">
+            <img class="dot3" src="header icons/hamburger-menu.svg" alt="header">
+            <img class="youtube" src="header icons/youtube-logo.svg" alt="">
+        </div>
+        <div class="middle-section"><input class="search-bar" type="text" placeholder="Search">
+            <button class="search"><img class="search-icon" src="header icons/search.svg" alt=""></button>
+            <button class="voice"><img class="voice-icon" src="header icons/voice-search-icon.svg" alt=""></button>
+        </div>
+        <div class="right-section">
+            rrrrrrr
+        </div>
+    </div>
+
     <div class="container">
         <div class="video">
             <div class="thumb">
