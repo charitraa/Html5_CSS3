@@ -5,11 +5,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Youtube</title>
+    <style>
+        .grid {
+            display: grid;
+            grid-template-columns: 100px 1fr;
+        }
+    </style>
 </head>
 
 <body>
-    <div style="background-color: black;">div1</div>
-    <div style="background-color: aqua;">div2</div>
+    <div class="grid">
+        <div style="background-color: rgb(17, 225, 80);">div1</div>
+        <div style="background-color: aqua;">div2 <p>text</p>
+        </div>
+        <div style="background-color: rgb(249, 0, 0);">div1</div>
+        <div style="background-color: aqua;">div2 <p>text</p>
+        </div>
+
+    </div>
+    <div class="grid" style="margin-top: 30px;">
+        <div style="background-color: rgb(229, 23, 23);">div1</div>
+        <div style="background-color: aqua;">div2 <p>text</p>
+        </div>
+    </div>
+    <div class="grid" style="margin-top: 30px;">
+        <div style="background-color: rgb(229, 23, 23);">div1</div>
+        <div style="background-color: aqua;">div2 <p>text</p>
+        </div>
+    </div>
 </body>
 
 </html>

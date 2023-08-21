@@ -10,7 +10,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
         body {
-            color: white;
             background-color: black;
         }
 
@@ -21,8 +20,7 @@
         }
 
         .thumbnail {
-            width: 300px;
-            display: block;
+            width: 100%;
         }
 
         .search-bar {
@@ -38,26 +36,7 @@
             font-weight: 600;
             line-height: 20px;
             margin-bottom: 15px;
-            color: rgb(225, 224, 224);
-        }
-
-        .video {
-            width: 300px;
-            display: inline-block;
-            vertical-align: top;
-            margin-right: 10px;
-        }
-
-        .channel-picture {
-            display: inline-block;
-            width: 50px;
-            vertical-align: top;
-
-        }
-
-        .video-detail {
-            display: inline-block;
-            width: 245px;
+            color: rgb(232, 231, 231);
         }
 
         .channel-picture img {
@@ -79,52 +58,107 @@
             font-size: 12px;
             color: #AAAAAA
         }
+
+        .video-info {
+            display: grid;
+            grid-template-columns: 50px 1fr;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            column-gap: 16px;
+            row-gap: 40px;
+        }
     </style>
 </head>
 
-
 <body>
     <input class="search-bar" type="text" placeholder="Search">
-    <div class="video">
-        <div class="thumb">
-            <img class="thumbnail" src="Thumbnail/hq720.webp" alt="">
-        </div>
-        <div>
-            <div class="channel-picture">
-                <img src="icon/harry.jpg" alt="">
+    <div class="container">
+        <div class="video">
+            <div class="thumb">
+                <img class="thumbnail" src="Thumbnail/hq720.webp" alt="">
             </div>
-            <div class="video-detail">
-                <p class="title">
-                    Introduction to OOPs in Python | Python Tutorial - Day #56
-                </p>
-                <p class="author">
-                    CodeWithHarry
-                </p>
-                <p class="veiw">
-                    65K views &#183 7 months ago
-                </p>
+            <div class="video-info">
+                <div class="channel-picture">
+                    <img src="icon/harry.jpg" alt="">
+                </div>
+                <div class="video-detail">
+                    <p class="title">
+                        Introduction to OOPs in Python | Python Tutorial - Day #56
+                    </p>
+                    <p class="author">
+                        CodeWithHarry
+                    </p>
+                    <p class="veiw">
+                        65K views &#183 7 months ago
+                    </p>
+                </div>
             </div>
         </div>
-    </div>
 
-    <div class="video">
-        <div class="thumb">
-            <img class="thumbnail" src="Thumbnail/hq720 (1).webp" alt="">
-        </div>
-        <div>
-            <div class="channel-picture">
-                <img src="icon/channels4_profile.jpg" alt="">
+        <div class="video">
+            <div class="thumb">
+                <img class="thumbnail" src="Thumbnail/hq720 (1).webp" alt="">
             </div>
-            <div class="video-detail">
-                <p class="title">
-                    Sia - Snowman (Lyrics)
-                </p>
-                <p class="author">
-                    LyricsWaves
-                </p>
-                <p class="veiw">
-                    16K views &#183 7 days ago
-                </p>
+            <div class="video-info">
+                <div class="channel-picture">
+                    <img src="icon/channels4_profile.jpg" alt="">
+                </div>
+                <div class="video-detail">
+                    <p class="title">
+                        Sia - Snowman (Lyrics)
+                    </p>
+                    <p class="author">
+                        LyricsWaves
+                    </p>
+                    <p class="veiw">
+                        16K views &#183 7 days ago
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="video">
+            <div class="thumb">
+                <img class="thumbnail" src="Thumbnail/hqdefault.webp" alt="">
+            </div>
+            <div class="video-info">
+                <div class="channel-picture">
+                    <img src="icon/channels4_profile (1).jpg" alt="">
+                </div>
+                <div class="video-detail">
+                    <p class="title">
+                        my tea's gone cold I'm wondering why
+                    </p>
+                    <p class="author">
+                        𝙪𝙣𝙝𝙖𝙥𝙥𝙞𝙚𝙧
+                    </p>
+                    <p class="veiw">
+                        1.8M views &#183 1 year ago
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="video">
+            <div class="thumb">
+                <img class="thumbnail" src="Thumbnail/hqdefault1.webp" alt="">
+            </div>
+            <div class="video-info">
+                <div class="channel-picture">
+                    <img src="icon/unnamed.jpg" alt="">
+                </div>
+                <div class="video-detail">
+                    <p class="title">
+                        Gotye - Somebody That I Used To Know (feat. Kimbra) [Official Music Video]
+                    </p>
+                    <p class="author">
+                        gotyemusic
+                    </p>
+                    <p class="veiw">
+                        2.1B views &#183 12 years ago
+                    </p>
+                </div>
             </div>
         </div>
     </div>
