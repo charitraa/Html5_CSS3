@@ -2,7 +2,8 @@ body {
         /* background-color: black; */
         margin: 0;
         padding-top: 80px;
-        /* height: 1000px; */
+        height: 1000px;
+        padding-left: 80px;
     }
 
 p {
@@ -16,7 +17,7 @@ p {
 }
 
 .search-bar {
-    background-color: black;
+    /* background-color: black; */
     color: white;
     font-size: 16px;
     flex: 1;
@@ -40,7 +41,7 @@ p {
     font-weight: 600;
     line-height: 20px;
     margin-bottom: 15px;
-    color: rgb(232, 231, 231);
+    /* color: rgb(232, 231, 231); */
 }
 
 .channel-picture img {
@@ -50,17 +51,18 @@ p {
 
 .thumb {
     margin-bottom: 12px;
+    position: relative;
 }
 
 .author {
     font-size: 12px;
-    color: #AAAAAA;
+    /* color: #000000; */
     margin-bottom: 4px;
 }
 
 .veiw {
     font-size: 12px;
-    color: #AAAAAA
+    /* color: #AAAAAA */
 }
 
 .video-info {
@@ -84,7 +86,7 @@ p {
     top: 0;
     left: 0;
     right: 0;
-
+    z-index: 100;
     background-color: white;
     border-bottom: 1px solid rgb(202, 200, 197)
 }
@@ -156,5 +158,41 @@ p {
 .mypic{
     height: 32px;
     border-radius: 16px;
+
+}
+
+.sidebar{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    top: 55px;
+    width: 72px;
+    background-color: white;
+}
+.video-time{
+    font-family: Roboto,Arial;
+    font-size: 12px;
+    font-weight: 500;
+    background-color: black;
+    color: white;
+    position: absolute;
+    bottom: 8px;
+    right: 5px;
+    padding: 4px;
+    border-radius: 2px;
+}
+.noti{
+    position: relative;
+}
+.result{
+    position: absolute;
+    top: -2px;
+    right: -5px;
+    background-color: rgb(221, 9, 9);
+    color: white;
+    font-weight: Roboto,Arial;
+    font-size: 11px;
+    padding: 2px 5px;
+    border-radius: 10px;
 
 }
