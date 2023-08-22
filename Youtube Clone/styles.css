@@ -2,8 +2,10 @@ body {
         /* background-color: black; */
         margin: 0;
         padding-top: 80px;
-        height: 1000px;
-        padding-left: 80px;
+        /* height: 1000px; */
+        padding-left: 96px;
+        padding-right: 24px;
+        background-color: rgb(249, 249, 249);
     }
 
 p {
@@ -40,7 +42,7 @@ p {
     font-size: 14px;
     font-weight: 600;
     line-height: 20px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     /* color: rgb(232, 231, 231); */
 }
 
@@ -50,7 +52,7 @@ p {
 }
 
 .thumb {
-    margin-bottom: 12px;
+    margin-bottom: 8px;
     position: relative;
 }
 
@@ -72,11 +74,31 @@ p {
 
 .container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr ;
     column-gap: 16px;
     row-gap: 40px;
 }
 
+@media (max-width:750px)
+{
+    .container{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width:751px) and (max-width:999px) 
+{
+    .container{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media (min-width:1000px)
+{
+    .container{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
 .header{
     height: 55px;
     display: flex;
@@ -88,7 +110,7 @@ p {
     right: 0;
     z-index: 100;
     background-color: white;
-    border-bottom: 1px solid rgb(202, 200, 197)
+    /* border-bottom: 1px solid rgb(202, 200, 197) */
 }
 .right-section{
     /* background-color: hsl(137, 44%, 26%); */
@@ -104,6 +126,7 @@ p {
     /* background-color: blue; */
     display: flex;
     align-items: center;
+    margin-left: 5px;
 }
 .middle-section{
     /* background-color: crimson; */
@@ -162,12 +185,16 @@ p {
 }
 
 .sidebar{
+    margin-top: 5px;
+    margin-top: 5px;
     position: fixed;
     left: 0;
     bottom: 0;
     top: 55px;
     width: 72px;
     background-color: white;
+    z-index: 200;
+    /* padding-top: 5px; */
 }
 .video-time{
     font-family: Roboto,Arial;
@@ -195,4 +222,27 @@ p {
     padding: 2px 5px;
     border-radius: 10px;
 
+}
+.sidebar-link{
+    height: 74px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+}
+.sidebar-link:hover{
+    background-color: rgb(235, 245, 255);
+}
+.sidebar-link img{
+    height: 24px;
+    margin-bottom:5px;
+
+}
+.sidebar-link div{
+    font-size: 10px;
+    font-family: Roboto, Arial;
+}
+.home,.sub,.lib{
+    margin-top: 3px;
 }
