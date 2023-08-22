@@ -1,6 +1,8 @@
 body {
         /* background-color: black; */
         margin: 0;
+        padding-top: 80px;
+        /* height: 1000px; */
     }
 
 p {
@@ -24,6 +26,7 @@ p {
     border-bottom-left-radius:30px;
     border-top-left-radius: 30px;
     /* box-shadow: inset 1px 2px 5px rgb(101, 96, 96); */
+    width: 0;
 
 }
 
@@ -77,14 +80,22 @@ p {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    background-color: white;
+    border-bottom: 1px solid rgb(202, 200, 197)
 }
 .right-section{
     /* background-color: hsl(137, 44%, 26%); */
     width: 200px;
+    margin-left: 20px;
     display: flex;
     align-items: center;
-    justify-content: space-between   ;
+    justify-content: space-evenly;
+    flex-shrink: 0;
 
 }
 .left-section{
@@ -144,4 +155,6 @@ p {
 }
 .mypic{
     height: 32px;
+    border-radius: 16px;
+
 }
