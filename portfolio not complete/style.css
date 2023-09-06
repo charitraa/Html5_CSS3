@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+body{
+    color: rgb(255, 255, 255);
+
+}
+.header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+.logo a {
+    position: relative;
+    font-size: 25px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;font-weight: 600;
+
+}
+.navbar a{
+    display: inline-block;
+    font-size: 25px;
+    color: rgb(255, 255, 255);
+    font-size: 500;
+    margin-left: 35px;
+    transition: .3s;
+
+}
+.navbar a:hover{
+    color: rgb(20, 188, 57);
+
+}
+
+.home{
+    position: relative;
+    width: 100%;
+    justify-content: space-between;
+    height: 100vh;
+    background: url('Pic/desktop-wallpaper-portfolio.jpg');
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    padding: 70px 10% 0;
+}
+.home-content{
+    max-width:600px;
+
+}
+.home-content h3{
+    font-size: 32px;
+    font-weight: 700;
+}
