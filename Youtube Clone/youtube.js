@@ -1,4 +1,4 @@
-import { videos } from './data/video'
+import { videos } from './data/video.js'
 
 let videoHTML = ''
 

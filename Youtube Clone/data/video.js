@@ -38,7 +38,7 @@ export const videos = [
   },
   {
     id: '3ebe75dc-64d2-4137-8860-1f5a963e534b',
-    thumnail: 'Thumbnail/thumb5.webp',
+    thumnail: 'Thumbnail/thumb5.jpg',
     icon: 'icon/icon5.jpg',
     title: 'Lukas Graham - 7 Years [Official Music Video]',
     author: 'Lukas Graham',
