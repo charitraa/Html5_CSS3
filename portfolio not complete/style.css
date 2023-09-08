@@ -57,7 +57,8 @@ body{
     background-position: center;
     background-size: cover;
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */;
+    gap: 200px;
     align-items: center;
     padding: 70px 10% 0;
 }
