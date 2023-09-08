@@ -25,10 +25,11 @@ body{
     font-size: 35px;
     color: rgb(255, 255, 255);
     text-decoration: none;font-weight: 600;
-    cursor: default;
+    color: rgb(20, 188, 57);;
 
 }
 .logo{
+    cursor: default;
     opacity: 0;
     animation: slideRight 1s ease forwards;
 
@@ -80,29 +81,29 @@ font-size: 56px;
 font-weight: 700;
 margin: -3px 0;
 opacity: 0;
-animation: slideRight 1s ease .7s forwards;
+animation: slideRight 1s ease .5s forwards;
 
 }
 .home-content p{
     font-size: 20px;
     opacity: 0;
-    Animation:slideLeft 1s ease .7s forwards;
+    Animation:slideLeft 1s ease .5s forwards;
 }
 .home-pic img{
-    margin-bottom: 20px;
-    width: 300px;
-    height: 300px;
+    margin-top: 50px;
+    width: 400px;
+    height: 400px;
     border-radius: 50%;
-    filter: brightness(7  0%);
+    filter: brightness(70%);
     margin-right: 50px;
 }
 
 .navigation{
     position: fixed;
-    top: 30%;
+    top: 40%;
     right: 50px;
     border: solid white 2px;
-    z-index: 5000;
+    z-index: 500;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -110,9 +111,17 @@ animation: slideRight 1s ease .7s forwards;
     height: 250px;
     width: 50px;
     border-radius: 20px;
+    
 }
 .navigation a{
     color: white;
+}
+.navigation a i{
+    transition: .3s all linear;
+}
+.navigation a:hover i{
+    transform: scale(1.5);
+    color:  rgb(20, 188, 57);
 }
 span{
     color:  rgb(20, 188, 57);
