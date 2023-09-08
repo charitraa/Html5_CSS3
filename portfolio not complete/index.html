@@ -7,7 +7,7 @@
     <title>Charitra.</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="style.css">
-    <script src="https://unpkg.com/typed.js/dist/typed.umd.js"></script>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
 </head>
 
 <body>
@@ -35,7 +35,7 @@
         <div class="home-content">
             <h3>Hey, there It's Me</h3>
             <h1>Charitra Shrestha</h1>
-            <h3>And I'm a <span class="change">Software Engineer</span></h3>
+            <h3>And I'm a <span class="change"></span></h3>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore recusandae corrupti, expedita natus
                 <br>
                 doloribus et veniam molestiae cum hic non quos sequi quisquam deserunt eius perspiciatis vel,
@@ -50,7 +50,16 @@
         </div>
     </section>
     <script src="https://kit.fontawesome.com/49b6b027f2.js" crossorigin="anonymous"></script>
-    <script src="change.js"></script>
+    <script>
+        var typed = new Typed('.change', {
+            strings: ['Software Engineer', 'Full Stack Engineer', 'App Developer'],
+            typeSpeed: 100,
+            backSpeed: 100,
+            backDelay: 1000,
+            loop: true
+        });
+    </script>
+
 </body>
 
 </html>
