@@ -156,15 +156,27 @@ body{
     display: flex;
     justify-content: space-around;
     margin-top: 50px;
-    padding: 20px 10%;
+    padding: 20px 7%;
 }
 .title{
-    width: 420px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-
+.name{
+    display: flex;
+    align-items: center;
+}
+.school{
+    margin-left: 10px;
+}.primary{
+    width: 410px;
+    height: 225px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between ;
+    font-size: 20px;
+}
 @keyframes slideRight{
     0%{
         transform: translateX(-100px);
