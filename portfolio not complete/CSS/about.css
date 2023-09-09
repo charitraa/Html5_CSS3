@@ -150,12 +150,19 @@ body{
 .name img{
     width: 50px;
     height: 50px;
+    border-radius: 50%;
 }
 .qalification{
     display: flex;
-    width: 100%;
     justify-content: space-around;
     margin-top: 50px;
+    padding: 20px 10%;
+}
+.title{
+    width: 420px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 @keyframes slideRight{
