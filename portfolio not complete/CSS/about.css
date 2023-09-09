@@ -30,7 +30,7 @@ body{
     align-items: center;
     z-index: 100;
 }
-span{
+.red{
     color: red;
 }
 .logo a {
@@ -113,7 +113,7 @@ span{
 }
 
 .text{
-    height: 200px;
+    height: 150px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -122,16 +122,32 @@ span{
     
 }
 .container img{
-    width: 500px;
-    height: 500px;
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    /* box-shadow: 0px 0px 10px red; */
 }
 
 
+.container{
+    width: 100%;
+    display: flex;
+    /* justify-content: space-between; */
+    /* align-items: center; */
+    padding: 0px 20%;
+    gap: 20%;
+    
+}
 
+.about-content{
+    margin-top: 30px;
+    font-size: 20px;
 
+}
 
-
-
+.mar{
+    margin-left: 40px;
+}
 
 @keyframes slideRight{
     0%{
