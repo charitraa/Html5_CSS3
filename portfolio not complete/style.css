@@ -100,7 +100,7 @@ animation: slideRight 1s ease .5s forwards;
     width: 400px;
     height: 400px;
     border-radius: 50%;
-    filter: brightness(70%);
+    filter: brightness(100%);
     margin-right: 50px;
 }
 
