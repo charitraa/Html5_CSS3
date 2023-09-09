@@ -65,7 +65,6 @@ span{
     color:  rgb(255, 0, 0);
 }
 
-
 .navigation{
     position: fixed;
     top: 38%;
@@ -112,6 +111,28 @@ span{
 .tooltip:hover .tooltiptext{
     visibility: visible;
 }
+
+.text{
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 20px;
+    
+}
+.container img{
+    width: 500px;
+    height: 500px;
+}
+
+
+
+
+
+
+
+
 @keyframes slideRight{
     0%{
         transform: translateX(-100px);
