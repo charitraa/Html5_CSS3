@@ -66,11 +66,12 @@ body{
     display: flex;
     /* justify-content: space-between; */;
     gap: 200px;
-    align-items: center;
+    align-items:  center;
     padding: 70px 10% 0;
 }
 .home-content{
     max-width:600px;
+    margin-bottom: 10%;
 
 }
 .home-content h3{
@@ -105,10 +106,12 @@ animation: slideRight 1s ease .5s forwards;
     opacity: 0;
     animation: slideLeft  1s ease .5s forwards;
 }
-
+.home-pic{
+    margin-bottom: 10%;
+}
 .navigation{
     position: fixed;
-    top: 38%;
+    top: 30%;
     right: 50px;
     border: solid white 2px;
     z-index: 500;
@@ -121,6 +124,7 @@ animation: slideRight 1s ease .5s forwards;
     border-radius: 20px;
     opacity: 0;
     animation:slideRight 1s ease .5s forwards;
+    
 }
 .navigation .tooltip a{
     color: white;
