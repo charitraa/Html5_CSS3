@@ -93,7 +93,7 @@ animation: slideRight 1s ease .5s forwards;
 .home-content p{
     font-size: 20px;
     opacity: 0;
-    Animation:slideLeft 1s ease .5s forwards;
+    animation:slideLeft 1s ease .5s forwards;
 }
 .home-pic img{
     margin-top: 50px;
@@ -102,6 +102,8 @@ animation: slideRight 1s ease .5s forwards;
     border-radius: 50%;
     filter: brightness(100%);
     margin-right: 50px;
+    opacity: 0;
+    animation: slideLeft  1s ease .5s forwards;
 }
 
 .navigation{
@@ -117,7 +119,8 @@ animation: slideRight 1s ease .5s forwards;
     height: 275px;
     width: 50px;
     border-radius: 20px;
-    
+    opacity: 0;
+    animation:slideRight 1s ease .5s forwards;
 }
 .navigation a{
     color: white;
@@ -158,8 +161,9 @@ span{
     overflow: hidden;
     z-index: 1000;
     text-decoration: none;
-    box-shadow:0 0 .5rem red
-
+    box-shadow:0 0 .5rem red;
+    opacity: 0;
+    animation: slideBottom 1s ease forwards;
 }
 a.btn:hover{
     color: rgb(0, 0, 0);
@@ -219,7 +223,7 @@ a.btn:hover::before{
 }
 @keyframes slideBottom{
     0%{
-        transform: translateY(-100px);
+        transform: translateY(100px);
         opacity: 0;
 
     }
