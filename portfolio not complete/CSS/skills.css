@@ -163,7 +163,7 @@ body{
 }
 .skill-bar .bar .html{
     width: 96%;
-    animation: html 2s;
+    animation: html 4s;
 }
 .skill-bar .bar .css{
     width: 85%;
@@ -175,15 +175,15 @@ body{
 }
 .skill-bar .bar .python{
     width: 65%;
-    animation: python 5s;
+    animation: python 4s;
 }
 .skill-bar .bar .java{
     width: 70%;
-    animation: java 6s;
+    animation: java 4s;
 }
 .skill-bar .bar .mysql{
     width: 80%;
-    animation: mysql 7s;
+    animation: mysql 3s;
 }
 .professional{
     display: grid;
@@ -194,16 +194,16 @@ body{
     margin: 10px 0 ;
     flex: 1 1 15rem;
 }
-.box.text{
+.box .texts{
     text-align: center;
     color: white;
     font-size: 1rem;
 }
-.box .text big{
-    font: 400;
+.box .texts big{
+    font-weight: 400;
     letter-spacing: 1px;
     position: absolute;
-    top:40%;
+    top:45%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -214,9 +214,10 @@ body{
     justify-content: center;
     align-items:center;
 }
-.box .text small{
+.box .texts small{
     display: block;
     font-weight: 600;
+    font-size: 20px;
 }
 
 .circle .points{
