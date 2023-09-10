@@ -122,7 +122,62 @@ body{
     font-size: 20px;
     
 }
+.skill-main{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-row-gap: 20px;
+    grid-column-gap: 50px;
 
+}
+.skill-bar{
+    margin-bottom: 2.3rem;
+
+}
+.skill-main h3{
+    margin-bottom: 2rem;
+    font-size: 20px;
+    text-align: center;
+}
+.skill-left .skill-bar .info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+}
+.skill-left .skill-bar .bar{
+    width: 100%;
+    height: 10px;
+    border-radius: 25px;
+    margin-top: 10px;
+    position: relative;
+}
+.skill-bar .bar span{
+    height: 100%;
+    position: absolute;
+    left: 0;
+    background: red;
+    border-radius: 25px;
+    box-shadow:0 0 .5rem red;
+}
+.skill-bar .bar .html{
+    width: 96%;
+}
+.skill-bar .bar .css{
+    width: 85%;
+}
+.skill-bar .bar .javascript{
+    width: 50%;
+}
+.skill-bar .bar .python{
+    width: 65%;
+}
+.skill-bar .bar .java{
+    width: 70%;
+}
+.skill-bar .bar .mysql{
+    width: 80%;
+}
 @keyframes slideRight{
     0%{
         transform: translateX(-100px);
