@@ -185,6 +185,15 @@ body{
     width: 80%;
     animation: mysql 7s;
 }
+.professional{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+.box{
+    margin: 10px 0 ;
+    flex: 1 1 15rem;
+}
+
 @keyframes slideRight{
     0%{
         transform: translateX(-100px);
