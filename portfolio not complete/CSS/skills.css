@@ -223,13 +223,13 @@ body{
 .circle .points{
     width: 2px;
     height: 10px;
-    background-color: rgb(254, 0, 0);
+    background-color: rgb(255, 255, 255);
     position: absolute;
     border-radius: 3px;
     transform: rotate(calc(var(--i)*var(--rot)) ) translateY(-45px);
 
 }
-.points .marked{
+.marked{
     animation: glow 0.04s linear forwards;
     animation-delay: calc(var(--i)*0.05s);
 }
@@ -337,13 +337,13 @@ body{
         width: 80%;
     }
 }
-@keyframes glow {
+@keyframes glow{
     0%{
         background: rgb(255, 0, 0);
         box-shadow:0;
     }
     100%{
-        background: red;
+        background: rgb(255, 0, 0);
         box-shadow:0 0 .5rem red ;
     }
     
