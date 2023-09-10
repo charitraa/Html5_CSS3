@@ -169,6 +169,7 @@ body{
 }
 .school{
     margin-left: 10px;
+    color: red;
 }.primary{
     width: 410px;
     height: 225px;
@@ -178,10 +179,10 @@ body{
     gap: 20px;
     font-size: 18px;
     padding: 10px;
+    border: solid 3px rgb(255, 255, 255);
+    border-radius: 20px;
 }
-.border{
-    border-right: solid 5px rgb(255, 0, 0);
-}
+
 
 
 @keyframes slideRight{
