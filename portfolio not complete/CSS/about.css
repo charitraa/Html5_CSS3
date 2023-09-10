@@ -155,7 +155,7 @@ body{
 .qalification{
     display: flex;
     justify-content: space-around;
-    margin-top: 50px;
+    margin-top: 10px;
     padding: 20px 7%;
 }
 .title{
@@ -180,7 +180,11 @@ body{
     font-size: 18px;
     padding: 10px;
     border: solid 3px rgb(255, 255, 255);
-    border-radius: 20px;
+    border-radius: 10px;
+    transition: transform .5s;
+}
+.primary:hover{
+    transform: translateY(-.7rem)
 }
 
 
