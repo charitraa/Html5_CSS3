@@ -174,9 +174,16 @@ body{
     height: 225px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between ;
-    font-size: 20px;
+    /* justify-content: space-around; */
+    gap: 20px;
+    font-size: 18px;
+    padding: 10px;
 }
+.border{
+    border-right: solid 2px rgb(255, 255, 255);
+}
+
+
 @keyframes slideRight{
     0%{
         transform: translateX(-100px);
