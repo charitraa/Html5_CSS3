@@ -133,7 +133,7 @@ body{
     outline: none;
     border: none;
     cursor: pointer;
-    font-size: .85rem;
+    font-size: 1rem;
     font-weight: 600;
     letter-spacing: .4px;
     margin-left: 1.3rem;
@@ -187,7 +187,7 @@ body{
     justify-content: center;
     flex-direction: column;
     transition: 0.5s;
-    padding: 0 2rem;
+    padding: 0 1rem;
 }
 .port-content h3{
     font-size: 1.5rem;
