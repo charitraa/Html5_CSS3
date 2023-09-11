@@ -114,7 +114,7 @@ body{
 }
 
 .text{
-    height: 78px;
+    height: 150px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -122,11 +122,9 @@ body{
     font-size: 20px;
     
 }
-.container{
-    margin-bottom: 100px;
-}
+
 .fillter-buttons{
-    margin: 2rem;
+    margin-bottom: 2rem;
     text-align: center;
 
 }
