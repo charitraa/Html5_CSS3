@@ -125,7 +125,7 @@ body{
 .container{
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     flex-direction: column;
     width: 100%;
 }
@@ -141,12 +141,12 @@ body{
 
 .name input, .email input{
     width: 300px;
-    height: 35px;
+    height: 45px;
     padding: 10px;
 }
 .subject input{
     width: 610px;
-    height: 35px;
+    height: 45px;
     padding: 10px;
 }
 .message{
@@ -154,13 +154,76 @@ body{
     grid-column-end: 4;
 }
 .message input{
+    position: relative;
     width:610px;
-    height:150px;
+    height:200px;
     padding: 10px;
 }
 .message input::placeholder{
-    height: 150px;
-    vertical-align: top;
+    position: absolute;
+    top: 10px
+}
+input[type=text]{
+    background: transparent;
+    border: white 1px solid;
+    border-radius: 10px;
+    color: white;
+    font-size: 20px;
+    transition: .5s;
+    outline: none;
+}
+input[type=text]:focus{
+    border-color: rgb(255, 0, 0);
+}
+.btn-box{
+    display: flex;
+    justify-content: flex-end;
+    width: 410px;
+    height: 45px;
+
+}.btn-box a.btn{
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 30px;
+    width: 100px;
+    height: 40px;
+    padding: 10px;
+    background: red;
+    color: white;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    font-weight: 600;
+    transition: .6s;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1000;
+    text-decoration: none;
+    box-shadow:0 0 .5rem red;
+    opacity: 0;
+    animation: slideBottom 1s ease forwards;
+}
+a.btn:hover{
+    color: rgb(0, 0, 0);
+}
+a.btn::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgb(255, 255, 255);
+    width: 0;
+    height: 100%;
+    z-index: -1;
+    transition: .4s;
+
+}
+
+a.btn:hover::before{
+    width: 100%;
+    
+
 }
 @keyframes slideRight{
     0%{

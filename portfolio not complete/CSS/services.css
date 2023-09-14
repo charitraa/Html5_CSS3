@@ -209,6 +209,9 @@ a.btn:hover::before{
     margin-top: 10px;
     font-size: 1.5rem;
 }
+.service-box p{
+    margin-top: 10px;
+}
 @keyframes slideRight{
     0%{
         transform: translateX(-100px);
