@@ -90,5 +90,24 @@ export const videos = [
     author: 'TEDx Talks',
     veiw: '3M views &#183 5 years ago',
     time: '18:26'
+  },
+  {
+    id: '819c51b5-5a19-4b-158a74267c00',
+    thumnail: 'Thumbnail/thumb11.webp',
+    icon: 'icon/icon11.jpg',
+    title: 'Fixing the login loop error of kali Linux |  Kali Linux  2022',
+    author: 'Nooe Hack',
+    veiw: '2.4K views &#183 10 months ago',
+    time: '5:34'
+  },
+  {
+    id: '819c51b5-5a19-4b-8a74267c00',
+    thumnail: 'Thumbnail/thumb12.webp.png',
+    icon: 'icon/icon11.jpg',
+    title:
+      'How to get the information of facebook friend from kali linux | in 🇳🇵 nepali',
+    author: 'Nooe Hack',
+    veiw: '2M views &#183 1 years ago',
+    time: '13:21'
   }
 ]
