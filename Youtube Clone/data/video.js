@@ -53,5 +53,24 @@ export const videos = [
     author: ' Old School HipHop',
     veiw: ' 170K views &#183 3 weeks ago',
     time: '2:57'
+  },
+  {
+    id: '8c9c52b5-5a19-4bcb-a5d1-158a74267c55',
+    thumnail: 'Thumbnail/thumb7.webp',
+    icon: 'icon/icon7.jpg',
+    title:
+      'हिंदी Oggy and the Cockroaches 🥓🍗 FOOD ONLY 🥓🍗 Hindi Cartoons for Kids',
+    author: ' Oggy Hindi - हिन्दी',
+    veiw: '33M view &#183 1 year ago',
+    time: '34:21'
+  },
+  {
+    id: '819c51b5-5a19-4bcb-a5d1-158a74267c55',
+    thumnail: 'Thumbnail/thumb8.webp',
+    icon: 'icon/icon8.jpg',
+    title: 'Hack like Mr Robot // WiFi, Bluetooth and Scada hacking',
+    author: ' David Bombal',
+    veiw: '1.7M view &#183 1 year ago',
+    time: '45:23'
   }
 ]
