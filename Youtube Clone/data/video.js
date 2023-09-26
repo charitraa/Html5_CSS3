@@ -61,7 +61,7 @@ export const videos = [
     title:
       'हिंदी Oggy and the Cockroaches 🥓🍗 FOOD ONLY 🥓🍗 Hindi Cartoons for Kids',
     author: ' Oggy Hindi - हिन्दी',
-    veiw: '33M view &#183 1 year ago',
+    veiw: '33M views &#183 1 year ago',
     time: '34:21'
   },
   {
@@ -70,7 +70,25 @@ export const videos = [
     icon: 'icon/icon8.jpg',
     title: 'Hack like Mr Robot // WiFi, Bluetooth and Scada hacking',
     author: ' David Bombal',
-    veiw: '1.7M view &#183 1 year ago',
+    veiw: '1.7M views &#183 1 year ago',
     time: '45:23'
+  },
+  {
+    id: '819c51b5-5a19-4bcb-158a74267c55',
+    thumnail: 'Thumbnail/thumb9.webp',
+    icon: 'icon/icon9.jpg',
+    title: 'O re Piya |  Rahat Fateh Ali Khan | Aaja Nachle',
+    author: ' Bollywood_Music',
+    veiw: '282K views &#183 1 month ago',
+    time: '6:20'
+  },
+  {
+    id: '819c51b5-5a19-4b-158a74267c55',
+    thumnail: 'Thumbnail/thumb10.jpg',
+    icon: 'icon/icon10.jpg',
+    title: 'How To Manipulate Emotions | Timon Krause | TEDxFryslân',
+    author: 'TEDx Talks',
+    veiw: '3M views &#183 5 years ago',
+    time: '18:26'
   }
 ]

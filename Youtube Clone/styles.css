@@ -16,6 +16,7 @@ p {
 
 .thumbnail {
     width: 100%;
+    border-radius: 10px;
 }
 
 .search-bar {
