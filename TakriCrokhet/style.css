@@ -91,7 +91,7 @@
     justify-content: center;
 }
 .image-main{
-    background-color: rgb(245, 245, 247);
+    background-color: rgb(247, 247, 255);
     padding:  150px 290px;
     display: flex;
     flex-wrap: wrap;
@@ -143,7 +143,7 @@
     filter: brightness(90%);
 
 }
-.section-posts{
+.section-posts,.section-photo{
     height: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -153,7 +153,41 @@
 .posts-main{
     display: flex;
     flex-direction: column;
+    gap: 50px;
 }
 .posts-main h1{
     font-size: 40px;
+}
+.posts{
+    display: flex;
+    gap: 20px;
+}
+span{
+    text-decoration: underline;
+}
+.post-first,.post-second,.post-third{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    line-height: 30px;
+    font-size: 18px;
+}
+.main-photos{
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+
+}
+.section-photo{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 150px 30px 150px 320px;
+    background-color: rgb(247, 247, 255);
+}
+
+.four-photo{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
 }
