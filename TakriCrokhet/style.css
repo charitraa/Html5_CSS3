@@ -74,10 +74,34 @@ transition: all 3s;
     font-size: 18px;
 }
 .text .btn{
-    border-radius: 1px;
+    border-radius: 5px;
     border: 1px solid blue;
-    padding: 10px 0 0 20px;
+    padding: 13px 0 0 18px;
     color: blue;
-    width: 80px;
-    height: 40px;
+    width: 90px;
+    height: 50px;
+    font-size: 20px;
+    
+}
+.categories-main{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+.image-main{
+    padding: 340px;
+    display: flex;
+    /* color: white; */
+    width: 100%;
+    align-content: center;
+    justify-content: center;
+    height: 500px;
+}
+.first-image{
+    background-image: url('image/8EDB5ED7-7829-4345-9F34-0D52B4D72759.JPEG');
+    width: 400px;
+    height: 600px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
