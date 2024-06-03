@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+body{
+    color: rgb(255, 255, 255);
+
+}
+.projects{    
+    position: relative;
+    background: url('../Pic/desktop-wallpaper-portfolio.jpg');
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    padding: 20px 10%;
+}
+.header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+.red{
+    color: red;
+}
+.logo a {
+    position: relative;
+    font-size: 35px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;font-weight: 600;
+    color: rgb(255, 255, 255)
+}
+.logo{
+    cursor: default;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+
+}
+.navbar a{
+    display: inline-block;
+    font-size: 25px;
+    color: rgb(255, 255, 255);
+    font-size: 500;
+    margin-left: 35px;
+    transition: .3s;
+    opacity: 0;
+    animation: slideTop .5s ease forwards;
+
+}
+.navbar a i{
+    transition: .3s all linear;
+}
+.navbar a:hover i{
+    transform: scale(1.5);
+    color:  rgb(255, 0, 0);
+}
+
+.navigation{
+    position: fixed;
+    top: 30%;
+    right: 50px;
+    border: solid white 2px;
+    z-index: 500;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 275px;
+    width: 50px;
+    border-radius: 20px;
+    opacity: 0;
+    animation:slideRight 1s ease .5s forwards;
+}
+.navigation .tooltip a{
+    color: white;
+}
+.navigation .tooltip a i{
+    transition: .3s all linear;
+}
+.navigation  .tooltip a:hover i{
+    transform: scale(1.5);
+    color:  rgb(255, 0, 0);
+}
+.tooltip{
+    position: relative;
+    display: inline-block;
+}
+.tooltiptext{
+    visibility: hidden;
+    margin-left: 10px;
+    width: 70px;
+    background-color: white;
+    color: black;
+    text-align:center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position:absolute ;
+    right: 40px;
+    z-index: 1;
+}
+.tooltip:hover .tooltiptext{
+    visibility: visible;
+}
+
+.text{
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 20px;
+    
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 100%;
+}
+.data{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 10px;
+}
+.subject{
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+.name input, .email input{
+    width: 300px;
+    height: 45px;
+    padding: 10px;
+}
+.subject input{
+    width: 610px;
+    height: 45px;
+    padding: 10px;
+}
+.message{
+    grid-column-start : 1;
+    grid-column-end: 4;
+}
+.message input{
+    position: relative;
+    width:610px;
+    height:200px;
+    padding: 10px;
+}
+.message input::placeholder{
+    position: absolute;
+    top: 10px
+}
+input[type=text]{
+    background: transparent;
+    border: white 1px solid;
+    border-radius: 10px;
+    color: white;
+    font-size: 20px;
+    transition: .5s;
+    outline: none;
+}
+input[type=text]:focus{
+    border-color: rgb(255, 0, 0);
+}
+.btn-box{
+    display: flex;
+    justify-content: flex-end;
+    width: 410px;
+    height: 45px;
+
+}.btn-box a.btn{
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 30px;
+    width: 100px;
+    height: 40px;
+    padding: 10px;
+    background: red;
+    color: white;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    font-weight: 600;
+    transition: .6s;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1000;
+    text-decoration: none;
+    box-shadow:0 0 .5rem red;
+    opacity: 0;
+    animation: slideBottom 1s ease forwards;
+}
+a.btn:hover{
+    color: rgb(0, 0, 0);
+}
+a.btn::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgb(255, 255, 255);
+    width: 0;
+    height: 100%;
+    z-index: -1;
+    transition: .4s;
+
+}
+
+a.btn:hover::before{
+    width: 100%;
+    
+
+}
+@keyframes slideRight{
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+
+    }
+    
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+@keyframes slideTop{
+    0%{
+        transform: translateY(-100px);
+        opacity: 0;
+
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+@keyframes slideTop{
+    0%{
+        transform: translateY(-100px);
+        opacity: 0;
+
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+@keyframes slideBottom{
+    0%{
+        transform: translateY(100px);
+        opacity: 0;
+
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+@keyframes slideLeft{
+    0%{
+        transform: translateX(100px);
+        opacity: 0;
+
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
