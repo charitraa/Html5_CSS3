@@ -31,7 +31,17 @@
 
     <h4>Lists</h4>
     <h5>Unordered List</h5>
-    <ul>
+    <ul style="list-style-type: circle;">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+    <ul style="list-style-type: disc;">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+    <ul style="list-style-type: square;">
         <li>Item 1</li>
         <li>Item 2</li>
         <li>Item 3</li>
@@ -42,7 +52,148 @@
         <li>Second item</li>
         <li>Third item</li>
     </ol>
+
+    <ol type="1">
+        <li>First item</li>
+        <li>Second item</li>
+        <li>Third item</li>
+    </ol>
+    <ol type="A">
+        <li>First item</li>
+        <li>Second item</li>
+        <li>Third item</li>
+    </ol>
+    <ol type="i">
+        <li>First item</li>
+        <li>Second item</li>
+        <li>Third item</li>
+    </ol>
     <pre>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur et molestias repudiandae suscipit magnam ipsum eum omnis beatae eveniet nesciunt ad nisi minima accusamus, aperiam repellendus architecto officia, laudantium nam.</pre>
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>HTML Table Example</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 20px;
+            }
+
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                margin-top: 20px;
+            }
+
+            th,
+            td {
+                border: 1px solid #ddd;
+                padding: 8px;
+                text-align: left;
+            }
+
+            th {
+                background-color: #f2f2f2;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <h1>Expense Tracker</h1>
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Amount</th>
+                <th>Date</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Coffee</td>
+                <td>$3.5</td>
+                <td>2024-06-01</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Lunch</td>
+                <td>$12.0</td>
+                <td>2024-06-01</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Books</td>
+                <td>$25.0</td>
+                <td>2024-06-02</td>
+            </tr>
+        </table>
+        <form action="" method="POST">
+            <h2>Add Expense</h2>
+            <div>
+                <label for="id">ID:</label>
+                <input type="number" id="id" name="id" required placeholder="ID">
+            </div>
+            <div>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required placeholder="name">
+            </div>
+            <div>
+                <label for="amount">Amount:</label>
+                <input type="number" id="amount" name="amount" step="0.01" required placeholder="amount">
+            </div>
+            <div>
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date" required placeholder="Date">
+            </div>
+            <div>
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+        <input type="file">
+        <input type="t"> <br>
+
+        <textarea name="" id=""></textarea>
+
+        <select name="cars">
+            <option value="volvo">Volvo</option>
+            <option value="saab">Saab</option>
+            <option value="fiat">Fiat</option>
+            <option value="audi">Audi</option>
+        </select>
+        <form action="" method="POST">
+            <!-- Other form elements -->
+            <div>
+                <label for="payment-method">Payment Method:</label>
+                <input type="radio" id="credit-card" name="payment-method" value="credit-card">
+                <label for="credit-card">Credit Card</label>
+                <input type="radio" id="debit-card" name="payment-method" value="debit-card">
+                <label for="debit-card">Debit Card</label>
+                <input type="radio" id="cash" name="payment-method" value="cash">
+                <label for="cash">Cash</label>
+            </div>
+            <!-- Other form elements -->
+        </form>
+
+        <form action="" method="POST">
+            <!-- Other form elements -->
+            <div>
+                <label for="preferences">Preferences:</label>
+                <input type="checkbox" id="vegan" name="preferences" value="vegan">
+                <label for="vegan">Vegan</label>
+                <input type="checkbox" id="gluten-free" name="preferences" value="gluten-free">
+                <label for="gluten-free">Gluten-Free</label>
+                <input type="checkbox" id="low-sodium" name="preferences" value="low-sodium">
+                <label for="low-sodium">Low-Sodium</label>
+            </div>
+            <!-- Other form elements -->
+        </form>
+
+    </body>
+
+    </html>
 
 </body>
 
