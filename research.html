@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My First Web Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            color: blue;
+        }
+
+        p {
+            color: green;
+        }
+
+        img {
+            width: 100px;
+            height: 100px;
+        }
+
+        ul {
+            list-style-type: circle;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Welcome to My First Web Page</h1>
+    <p>This is a paragraph of text. HTML provides various heading levels from <code>&lt;h1&gt;</code> to
+        <code>&lt;h6&gt;</code>.
+    </p>
+
+    <img src="./Screenshot from 2024-04-11 13-53-26.png" alt="pcps">
+
+    <h2>List of My Favorite Things</h2>
+    <ul>
+        <li>Music</li>
+        <li>Books</li>
+        <li>Movies</li>
+    </ul>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Amount</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Coffee</td>
+                <td>$3.5</td>
+                <td>2024-06-01</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Lunch</td>
+                <td>$12.0</td>
+                <td>2024-06-01</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Books</td>
+                <td>$25.0</td>
+                <td>2024-06-02</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th>Total Amount:</th>
+                <td colspan="2">$40.5</td>
+                <th></th>
+            </tr>
+        </tfoot>
+    </table>
+
+
+
+
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Country</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>John</td>
+                <td>25</td>
+                <td>USA</td>
+            </tr>
+            <tr>
+                <td rowspan="2">Jane</td>
+                <td>22</td>
+                <td colspan="2">Canada</td>
+            </tr>
+            <tr>
+                <td>23</td>
+                <td>USA</td>
+            </tr>
+            <tr>
+                <td>Bob</td>
+                <td>30</td>
+                <td>UK</td>
+            </tr>
+            <tr>
+                <td>Alice</td>
+                <td>28</td>
+                <td>Canada</td>
+            </tr>
+            <tr>
+                <td>Tom</td>
+                <td>35</td>
+                <td>USA</td>
+            </tr>
+            <tr>
+                <td>Eve</td>
+                <td>26</td>
+                <td>UK</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Embedding External Content</h2>
+    <p>Here's an example of how to embed external content in an HTML document:</p>
+
+    <p>1. PDF files:</p>
+    <p>You can embed a PDF file in an HTML document using the <code>object</code> tag. Here's an example of how to embed
+        a
+        PDF file:</p>
+    <object data="./University Id 2214705 Assignment2 taxi booking system .pdf" type="application/pdf" width="500px"
+        height="800px">
+        <embed src="path/to/your/pdf/file.pdf" type="application/pdf" width="500px" height="800px">
+        <p>Your browser does not support PDFs. Please download the file to view it.</p>
+    </object>
+
+    <p>2. Google maps:</p>
+    <p>You can embed a Google map in an HTML document using the <code>iframe</code> tag. Here's an example of how to
+        embed a
+        Google map:</p>
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3533.062595026153!2d85.31443607532293!3d27.684460176195692!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb19b5ad9b8dff%3A0x12a4b82675e789a3!2sPatan%20College%20For%20Professional%20Studies!5e0!3m2!1sen!2snp!4v1717520345118!5m2!1sen!2snp"
+        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+
+    <p>3. YouTube videos:</p>
+    <p>You can embed a YouTube video in an HTML document using the <code>iframe</code> tag. Here's an example of how to
+        embed a YouTube video:</p>
+    <iframe width="560" height="315" src="./yt1s.com - Thanks For Watching Outro Free Download.mp4" frameborder="0"
+        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</body>
+
+</html>
