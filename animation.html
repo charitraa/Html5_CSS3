@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background: linear-gradient(45deg, rgb(10 13 37), rgb(17 21 52));
+            margin: 2rem;
+            font-family: 'Inter', sans-serif;
+        }
+
+        p a {
+            color: white;
+        }
+
+        .desc {
+            color: rgba(255, 255, 255, 0.4);
+            margin: 0 0 2rem 0;
+            display: block;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1>Different Ways to Delete Items <span class="button reset-button">Reset</span></h1>
+    <p class="desc">Click the <i class="fal fa-times"></i> cross button on each card to delete it, and watch the
+        animation.
+        <a href="https://fjolt.com/article/css-delete-item-ui-animations">Read the article here</a>.
+    </p>
+    <div class="item-holder">
+        <div class="item">
+            <div class="image"></div>
+            <div data-delete="fall" class="delete"><i class="far fa-times"></i></div>
+            <div class="text">
+                <h2>Fall</h2>
+                <p>Click the cross above to delete this item..</p>
+            </div>
+            <div class="animation-assets"></div>
+        </div>
+    </div>
+    <script defer src="https://kit.fontawesome.com/628c8d2499.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+    <script>
+
+        const parent = function (el, match, last) {
+            var result = [];
+            for (var p = el && el.parentElement; p; p = p.parentElement) {
+                result.push(p);
+                if (p.matches(match)) {
+                    break;
+                }
+            }
+            if (last == 1) {
+                return result[result.length - 1];
+            } else {
+                return result;
+            }
+        };
+
+        document.querySelector('.reset-button').addEventListener('click', function (e) {
+            document.querySelectorAll('.item').forEach(function (item) {
+                if (item.classList.contains('shred')) {
+                    item.setAttribute('class', 'item shred');
+                } else {
+                    item.setAttribute('class', 'item');
+                }
+                document.querySelectorAll('.animation-assets > div').forEach(function (item) {
+                    item.remove();
+                });
+            })
+        });
+
+        document.querySelectorAll('.delete').forEach(function (item) {
+            item.addEventListener('click', function (e) {
+                let newClass = this.getAttribute('data-delete');
+                let getParent = parent(this, '.item', 1);
+                if (newClass === 'shredder') {
+                    getParent.classList.add('shredding');
+                    // Shredder animation
+                    // Slices
+                    let shredAmount = 10;
+                    let width = document.querySelector('.item.shred').getBoundingClientRect().width / shredAmount;
+                    let animationName = 'spinALittle';
+                    let animationDelay = 0;
+                    for (let x = 0; x <= shredAmount; ++x) {
+                        animationDelay += 1;
+                        if (x % 2 === 0) {
+                            animationName = 'spinALittleAlt';
+                        } else {
+                            animationName = 'spinALittle';
+                        }
+                        if (x % 3 === 0) {
+                            animationDelay = 0;
+                        }
+                        let newEl = document.createElement('div');
+                        newEl.classList.add('item-wrap');
+                        newEl.innerHTML = `<div class="item">${getParent.innerHTML}</div>`;
+                        newEl.querySelector('.animation-assets').innerHTML = '';
+                        let clip = `clip-path: inset(0px ${(shredAmount - x - 1) * width}px 0 ${(x * width)}px); animation-delay: 0.${animationDelay}s; transform-origin: ${x * width}px 125px; animation-name: ${animationName};`
+                        newEl.children[0].setAttribute('style', clip);
+                        getParent.querySelector('.animation-assets').append(newEl);
+                    }
+                } else {
+                    getParent.classList.add(newClass);
+                }
+            });
+        }); 
+    </script>
+</body>
+
+</html>
