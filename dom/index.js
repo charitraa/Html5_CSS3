@@ -29,3 +29,7 @@ if (element.hasAttribute('aria-control')) {
 
 const newElement = document.createElement('div')
 newElement.textContent = 'newly created element'
+
+const bodyElement = document.body
+
+bodyElement.appendChild(newElement)
