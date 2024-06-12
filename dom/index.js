@@ -33,3 +33,24 @@ newElement.textContent = 'newly created element'
 const bodyElement = document.body
 
 bodyElement.appendChild(newElement)
+
+// Select the target element
+const target = document.getElementById('target')
+
+// Get the next sibling
+const nextSibling = target.nextElementSibling
+console.log('Next Sibling:', nextSibling ? nextSibling.textContent : 'None')
+
+// Get the previous sibling
+const prevSibling = target.previousElementSibling
+console.log('Previous Sibling:', prevSibling ? prevSibling.textContent : 'None')
+
+// Adding a class to the next sibling
+if (nextSibling) {
+  nextSibling.classList.add('highlight')
+}
+
+// Adding a class to the previous sibling
+if (prevSibling) {
+  prevSibling.classList.add('highlight')
+}
