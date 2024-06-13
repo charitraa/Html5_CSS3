@@ -8,7 +8,7 @@
 </head>
 
 <body>
-    <h1 id="title">Hello, World</h1>
+    <!-- <h1 id="title">Hello, World</h1>
     <p class="content"> This is a paragraph</p>
     <ul>
         <li>Item 1</li>
@@ -24,8 +24,30 @@
         <li id="target">Item 3</li>
         <li>Item 4</li>
         <li>Item 5</li>
-    </ul>
-    <script src="./index.js"></script>
+    </ul> -->
+
+    <h2>Javascript Ht Events</h2>
+    <p class="paragraph">Click the button to display the date</p>
+    <button onclick="displayData()" id="btn">The time is?</button>
+    <p id="demo"></p>
+
+
+    <!-- <script src="./index.js">
+    </script> -->
+    <script>
+        function displayData() {
+            document.getElementById('demo').innerHTML = Date()
+        }
+        const color = document.getElementById('btn')
+        color.onclick = function () {
+            color.style.color = 'blue'
+        }
+        color.addEventListener('click', function () {
+            console.log('color')
+        })
+        const para = document.getElementsByClassName('paragraph')
+
+    </script>
 
 </body>
 
