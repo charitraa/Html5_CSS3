@@ -16,7 +16,7 @@ To get started with the code in this repository, follow these steps:
 
 1. **Clone the repository:**
     ```bash
-    git clone https://github.com/your-username/html_css.git
+    git clone https://github.com/charitraa/html_css.git
     ```
 
 2. **Navigate to the project directory:**
