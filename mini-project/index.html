@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Management System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .main-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            align-items: flex-start;
+            justify-content: center;
+            max-width: 600px;
+            width: 100%;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            background-color: #fff;
+        }
+
+        .favorite {
+            color: red;
+        }
+
+        .add,
+        .remove {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            width: 100%;
+        }
+
+        .btn,
+        .search,
+        .remo,
+        .clear {
+            border: 1px solid rgb(125, 124, 124);
+            padding: 10px 20px;
+            background-color: green;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            flex: 1;
+            text-align: center;
+        }
+
+        .remo,
+        .clear {
+            background-color: red;
+        }
+
+        input {
+            padding: 10px;
+            font-size: 16px;
+            flex: 2;
+            min-width: 200px;
+        }
+
+        .list {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        .heading {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        li {
+            font-size: 18px;
+            margin-left: -20px;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 10px;
+            }
+
+            .btn,
+            .search,
+            .remo,
+            .clear {
+                padding: 5px 10px;
+                font-size: 14px;
+            }
+
+            input {
+                padding: 5px;
+                font-size: 14px;
+            }
+
+            .heading {
+                font-size: 20px;
+            }
+
+            li {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="container">
+            <h1>Book Management System</h1>
+            <div class="add">
+                <input type="text" id="title">
+                <div class="btn" onclick="addBook()">Add</div>
+                <div class="search" onclick="searchBook()">Search</div>
+            </div>
+            <div class="remove">
+                <div class="remo" onclick="removeBook()">Remove Book</div>
+                <div class="clear" onclick="clearSearchHighlights()">Clear Search</div>
+            </div>
+            <div class="list">
+                <div class="heading">List of Books</div>
+                <ol id="book-list"></ol>
+            </div>
+        </div>
+    </div>
+    <script>
+        const bookTitle = document.getElementById('title');
+
+        function addBook() {
+            const title = bookTitle.value;
+            if (title) {
+                const ul = document.getElementById("book-list");
+                const li = document.createElement("li");
+                li.textContent = title;
+                li.addEventListener("click", toggleFavorite);
+                ul.appendChild(li);
+                bookTitle.value = '';
+            }
+        }
+
+        function searchBook() {
+            const searchTerm = document.getElementById("title").value.toLowerCase();
+            const ul = document.getElementById("book-list");
+            const liElements = ul.getElementsByTagName("li");
+
+            for (let li of liElements) {
+                if (li.textContent.toLowerCase().includes(searchTerm)) {
+                    li.style.backgroundColor = "yellow";
+                } else {
+                    li.style.backgroundColor = "";
+                }
+            }
+        }
+
+        function removeBook() {
+            const ul = document.getElementById("book-list");
+            const liElements = ul.getElementsByTagName("li");
+
+            if (liElements.length > 0) {
+                const lastLi = liElements[liElements.length - 1];
+                const confirmation = confirm(`Are you sure you want to remove the book: ${lastLi.textContent}?`);
+                if (confirmation) {
+                    ul.removeChild(lastLi);
+                }
+            } else {
+                alert("No books to remove.");
+            }
+        }
+
+        function toggleFavorite(event) {
+            const li = event.target;
+            li.classList.toggle("favorite");
+        }
+
+        function clearSearchHighlights() {
+            const ul = document.getElementById("book-list");
+            const liElements = ul.getElementsByTagName("li");
+
+            for (let li of liElements) {
+                li.style.backgroundColor = "";
+            }
+        }
+
+        document.querySelectorAll("#book-list li").forEach(li => {
+            li.addEventListener("click", toggleFavorite);
+        });
+    </script>
+</body>
+
+</html>
