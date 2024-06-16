@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book List</title>
+    <style>
+        .favorite {
+            font-weight: bold;
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Book List</h1>
+    <input type="text" id="search-bar" placeholder="Search for a book">
+    <button onclick="searchBook()">Search</button>
+    <button onclick="clearSearchHighlights()">Clear Highlights</button>
+    <ol id="book-list">
+
+    </ol>
+    <button onclick="addBook()">Add Book</button>
+    <button onclick="removeBook()">Remove Last Book</button>
+
+    <script>
+        function addBook() {
+            const bookTitle = prompt("Enter the book title:");
+            if (bookTitle) {
+                const ul = document.getElementById("book-list");
+                const li = document.createElement("li");
+                li.textContent = bookTitle;
+                li.addEventListener("click", toggleFavorite);
+                ul.appendChild(li);
+            }
+        }
+
+        function searchBook() {
+            const searchTerm = document.getElementById("search-bar").value.toLowerCase();
+            const ul = document.getElementById("book-list");
+            const liElements = ul.getElementsByTagName("li");
+
+            for (let li of liElements) {
+                if (li.textContent.toLowerCase().includes(searchTerm)) {
+                    li.style.backgroundColor = "yellow";
+                } else {
+                    li.style.backgroundColor = "";
+                }
+            }
+        }
+
+        function removeBook() {
+            const ul = document.getElementById("book-list");
+            const liElements = ul.getElementsByTagName("li");
+
+            if (liElements.length > 0) {
+                const lastLi = liElements[liElements.length - 1];
+                const confirmation = confirm(`Are you sure you want to remove the book: ${lastLi.textContent}?`);
+                if (confirmation) {
+                    ul.removeChild(lastLi);
+                }
+            } else {
+                alert("No books to remove.");
+            }
+        }
+
+        function toggleFavorite(event) {
+            const li = event.target;
+            li.classList.toggle("favorite");
+        }
+
+
+        function clearSearchHighlights() {
+            const ul = document.getElementById("book-list");
+            const liElements = ul.getElementsByTagName("li");
+
+            for (let li of liElements) {
+                li.style.backgroundColor = "";
+            }
+        }
+
+        document.querySelectorAll("#book-list li").forEach(li => {
+            li.addEventListener("click", toggleFavorite);
+        });
+    </script>
+</body>
+
+</html>

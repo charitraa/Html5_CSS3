@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <style>
+    #jj {
+      padding: 0.5em;
+      width: 450px;
+    }
+
+    button {
+      padding: 0.5em;
+    }
+  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body>
+  <h1></h1>
+  <button id="action">Add Book</button>
+  <ul class="lists"></ul>
+  <hr>
+  <h2>Search</h2>
+  <input type="text" id='jj' placeholder="Search">
+  <button id="sbtn">Search</button>
+  <ul class="searched"></ul>
+  <script>
+    let userChoice = "";
+    let ulclass = document.getElementsByClassName("lists")[0];
+    let searched = document.getElementsByClassName("searched")[0];
+    let btn = document.getElementById("action");
+    let searchField = document.getElementById("jj");
+    let searchbtn = document.getElementById("sbtn");
+    let bluebery = [];
+
+    btn.addEventListener("click", () => {
+      userChoice = window.prompt("Enter choice of book?");
+      addBook();
+    });
+
+    searchbtn.addEventListener("click", () => {
+      searchBook();
+    });
+
+    const addBook = () => {
+      bluebery.push(userChoice);
+      console.log(bluebery);
+      ulclass.innerHTML += <li>${userChoice}</li>;
+      let high = document.createElement('button')
+      high.textContent = 'Add To faviourite'
+      high.addEventListener('click', () => {
+        ulclass.style.background = 'red'
+      });
+      ulclass.appendChild(high)
+    };
+
+    const searchBook = () => {
+      let bb = bluebery.filter((val) => {
+        return val === searchField.value;
+      });
+
+      searched.innerHTML = '';
+      bb.forEach(book => {
+        let li = document.createElement('li');
+        li.className = 'nn';
+        li.textContent = book;
+        let remBtn = document.createElement('button');
+        remBtn.textContent = 'Remove';
+        remBtn.addEventListener('click', () => {
+          li.remove();
+          remBtn.remove();
+        });
+        searched.appendChild(li);
+        searched.appendChild(remBtn);
+      });
+    };
+  </script>
+</body>
+
+</html>
