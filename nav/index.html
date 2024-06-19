@@ -16,10 +16,11 @@
             display: flex;
             justify-content: space-around;
             align-items: center;
-            background-color: #3ca0c4;
+            background-color: red;
             padding: 10px 20px;
             color: white;
         }
+
 
         .brand-title {
             font-size: 24px;
@@ -68,6 +69,7 @@
                 display: none;
                 position: absolute;
                 top: 45px;
+                width: 40%;
                 right: 0;
                 padding: 20px;
                 background-color: #3ca0c4;
@@ -86,6 +88,11 @@
             .toggle-button {
                 display: flex;
             }
+        }
+
+        ul li a:hover {
+            text-decoration: underline white;
+            transform: translateX();
         }
     </style>
 </head>
@@ -107,6 +114,7 @@
             </ul>
         </div>
     </nav>
+
     <script>
         function toggleNavbar() {
             var x = document.getElementById('navbar-links')
