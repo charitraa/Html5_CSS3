@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Form</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .main-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      padding: 20px;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      padding: 40px;
+      box-shadow: 0 0 12px 5px rgb(186, 184, 184);
+      max-width: 100%;
+      width: 400px;
+    }
+
+    .heading {
+      text-align: center;
+      font-size: 30px;
+      font-weight: bold;
+    }
+
+    .name,
+    .email,
+    .message,
+    .address,
+    .phone {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      font-size: 18px;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      border-radius: 5px;
+      border: 2px solid rgb(161, 157, 157);
+      padding: 5px;
+    }
+
+    .btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .submit {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid rgb(161, 157, 157);
+      border-radius: 5px;
+      width: 100px;
+      height: 40px;
+      font-size: 18px;
+      background-color: green;
+      color: white;
+      cursor: pointer;
+    }
+
+    textarea {
+      height: 100px;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 20px;
+        width: 100%;
+      }
+
+      .heading {
+        font-size: 24px;
+      }
+
+      .submit {
+        width: 80px;
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="main-container">
+    <div class="container">
+      <div class="heading">
+        Contact us
+      </div>
+      <div class="name">
+        <label for="name">Full Name</label>
+        <input type="text" id="name">
+      </div>
+      <div class="address">
+        <label for="address">Address</label>
+        <input type="text" id="address">
+      </div>
+      <div class="phone">
+        <label for="phone">Phone Number</label>
+        <input type="number" id="phone">
+      </div>
+      <div class="email">
+        <label for="email">Email</label>
+        <input type="email" id="email">
+      </div>
+      <div class="message">
+        <label for="message">Message</label>
+        <textarea id="message"></textarea>
+      </div>
+      <div class="btn">
+        <div class="submit">
+          Submit
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
