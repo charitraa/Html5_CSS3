@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animation</title>
+  <style>
+    .animated-button {
+      padding: 10px 20px;
+      font-size: 16px;
+      color: white;
+      background-color: blue;
+      border: none;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .animated-button:hover {
+      background-color: darkblue;
+      transform: scale(1.1);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    .pulsating-circle {
+      width: 100px;
+      height: 100px;
+      background-color: red;
+      border-radius: 50%;
+      animation: pulse 1.5s infinite;
+    }
+
+    @keyframes pulse {
+
+      0%,
+      100% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.2);
+      }
+    }
+
+    .container {
+      width: 200px;
+      height: 200px;
+      border: 1px solid #ccc;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .ball {
+      width: 50px;
+      height: 50px;
+      background-color: orange;
+      border-radius: 50%;
+      position: absolute;
+      top: 0;
+      animation: bounce 2s infinite ease-in-out;
+    }
+
+    @keyframes bounce {
+
+      0%,
+      100% {
+        top: 0;
+      }
+
+      50% {
+        top: 150px;
+      }
+    }
+
+    .gallery {
+      display: flex;
+      gap: 10px;
+    }
+
+    .gallery img {
+      width: 300px;
+      height: 300px;
+      opacity: 0;
+      animation: fadeIn 1s forwards;
+    }
+
+    .gallery img:nth-child(1) {
+      animation-delay: 0.5s;
+    }
+
+    .gallery img:nth-child(2) {
+      animation-delay: 1s;
+    }
+
+    .gallery img:nth-child(3) {
+      animation-delay: 1.5s;
+    }
+
+    .gallery img:nth-child(4) {
+      animation-delay: 2s;
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+
+    .marquee {
+      white-space: nowrap;
+      overflow: hidden;
+      position: relative;
+      background: lightgrey;
+    }
+
+    .marquee span {
+      display: inline-block;
+      padding-left: 100%;
+      animation: scroll 10s linear infinite;
+    }
+
+    @keyframes scroll {
+      from {
+        transform: translateX(100%);
+      }
+
+      to {
+        transform: translateX(-100%);
+      }
+    }
+
+    .card {
+      perspective: 1000px;
+      width: 200px;
+      height: 300px;
+    }
+
+    .card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transform-style: preserve-3d;
+      transition: transform 0.6s;
+    }
+
+    .card:hover .card-inner {
+      transform: rotateY(180deg);
+    }
+
+    .card-front,
+    .card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      color: white;
+      border-radius: 10px;
+    }
+
+    .card-front {
+      background-color: blue;
+    }
+
+    .card-back {
+      background-color: red;
+      transform: rotateY(180deg);
+    }
+
+    .spinner {
+      width: 50px;
+      height: 50px;
+      border: 5px solid lightgrey;
+      border-top: 5px solid blue;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    .accordion {
+      width: 100%;
+    }
+
+    .accordion-item {
+      border: 1px solid #ccc;
+      margin-bottom: 5px;
+    }
+
+    .accordion-header {
+      padding: 10px;
+      background: #f0f0f0;
+      cursor: pointer;
+    }
+
+    .accordion-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+      padding: 0 10px;
+    }
+
+    .accordion-item.active .accordion-content {
+      max-height: 100px;
+      padding: 10px;
+    }
+
+    .progress-bar {
+      width: 100%;
+      background-color: #f0f0f0;
+      border-radius: 5px;
+      overflow: hidden;
+    }
+
+    .progress {
+      height: 20px;
+      background-color: green;
+      width: 0;
+      animation: fill 2s forwards;
+    }
+
+    @keyframes fill {
+      to {
+        width: var(--progress);
+      }
+    }
+
+
+    .menu-button {
+      margin: 20px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .nav-menu {
+      position: fixed;
+      top: 0;
+      left: -100%;
+      width: 200px;
+      height: 100%;
+      background-color: #333;
+      transition: left 0.3s ease;
+    }
+
+    .nav-menu ul {
+      list-style: none;
+      padding: 20px;
+    }
+
+    .nav-menu li {
+      margin: 20px 0;
+    }
+
+    .nav-menu a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+    }
+
+    .nav-menu.open {
+      left: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <button class="animated-button">Hover Me!</button>
+  <div class="pulsating-circle"></div>
+  <div class="container">
+    <div class="ball"></div>
+  </div>
+  <div class="gallery">
+    <img src="../TakriCrokhet/image/8EDB5ED7-7829-4345-9F34-0D52B4D72759.JPEG" alt="Image 1">
+    <img src="../TakriCrokhet/image/951233AA-F75C-4972-93C9-57A186069A87.JPG" alt="Image 2">
+    <img src="../TakriCrokhet/image/IMG_6697.jpg" alt="Image 3">
+    <img src="../TakriCrokhet/image/IMG_6825.jpg" alt="Image 4">
+  </div>
+  <div class="marquee">
+    <span>Scrolling Text</span>
+  </div>
+  <div class="card">
+    <div class="card-inner">
+      <div class="card-front">Front</div>
+      <div class="card-back">Back</div>
+    </div>
+  </div>
+
+  <div class="spinner"></div>
+  <div class="accordion">
+    <div class="accordion-item">
+      <div class="accordion-header">Section 1</div>
+      <div class="accordion-content">Content 1</div>
+    </div>
+    <div class="accordion-item">
+      <div class="accordion-header">Section 2</div>
+      <div class="accordion-content">Content 2</div>
+    </div>
+  </div>
+  <div class="progress-bar">
+    <div class="progress" style="--progress: 70%;"></div>
+  </div>
+
+  <button class="menu-button">Toggle Menu</button>
+  <nav class="nav-menu">
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <script>document.querySelectorAll('.accordion-header').forEach(header => {
+      header.addEventListener('click', () => {
+        const accordionItem = header.parentElement;
+        document.querySelectorAll('.accordion-item').forEach(item => {
+          if (item !== accordionItem) {
+            item.classList.remove('active');
+            item.querySelector('.accordion-content').style.maxHeight = 0;
+          }
+        });
+        accordionItem.classList.toggle('active');
+        const content = accordionItem.querySelector('.accordion-content');
+        content.style.maxHeight = content.style.maxHeight ? null : content.scrollHeight + 'px';
+      });
+    });
+    const menuButton = document.querySelector('.menu-button');
+    const navMenu = document.querySelector('.nav-menu');
+
+    menuButton.addEventListener('click', () => {
+      navMenu.classList.toggle('open');
+    });
+
+
+
+  </script>
+</body>
+
+</html>
