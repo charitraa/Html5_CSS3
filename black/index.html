@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dark Mode and Light Mode Website</title>
+  <style>
+    :root {
+      --background-color: #ffffff;
+      --text-color: #000000;
+      --navbar-background: #f8f9fa;
+      --card-background: #f8f9fa;
+      --footer-background: #f8f9fa;
+    }
+
+    [data-theme="dark"] {
+      --background-color: #121212;
+      --text-color: #ffffff;
+      --navbar-background: #1f1f1f;
+      --card-background: #1f1f1f;
+      --footer-background: #1f1f1f;
+    }
+
+    body {
+      background-color: var(--background-color);
+      color: var(--text-color);
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .navbar {
+      background-color: var(--navbar-background);
+      padding: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+    }
+
+    .nav-links a {
+      color: var(--text-color);
+      text-decoration: none;
+    }
+
+    .theme-toggle {
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: var(--text-color);
+    }
+
+    .carousel {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .carousel-slide {
+      min-height: 300px;
+      background-size: cover;
+      background-position: center;
+      transition: opacity 0.5s;
+    }
+
+    .carousel-control {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0, 0, 0, 0.5);
+      color: #ffffff;
+      border: none;
+      padding: 0.5rem;
+      cursor: pointer;
+    }
+
+    .carousel-control.prev {
+      left: 1rem;
+    }
+
+    .carousel-control.next {
+      right: 1rem;
+    }
+
+    .cards {
+      display: flex;
+      gap: 1rem;
+      padding: 2rem;
+    }
+
+    .card {
+      background-color: var(--card-background);
+      padding: 1rem;
+      border-radius: 0.5rem;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      transition: background-color 0.3s;
+    }
+
+    footer {
+      background-color: var(--footer-background);
+      padding: 1rem;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar">
+      <a href="#" class="nav-logo">Logo</a>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <button class="theme-toggle" aria-label="Toggle Dark Mode">🌓</button>
+    </nav>
+  </header>
+  <main>
+    <section class="carousel">
+      <!-- Carousel slides -->
+      <div class="carousel-slide" style="background-image: url('image1.jpg');"></div>
+      <div class="carousel-slide" style="background-image: url('image2.jpg');"></div>
+      <div class="carousel-slide" style="background-image: url('image3.jpg');"></div>
+      <!-- Carousel controls -->
+      <button class="carousel-control prev" aria-label="Previous Slide">‹</button>
+      <button class="carousel-control next" aria-label="Next Slide">›</button>
+    </section>
+    <section class="cards">
+      <div class="card">
+        <h3>Card Title 1</h3>
+        <p>Card content goes here.</p>
+      </div>
+      <div class="card">
+        <h3>Card Title 2</h3>
+        <p>Card content goes here.</p>
+      </div>
+      <div class="card">
+        <h3>Card Title 3</h3>
+        <p>Card content goes here.</p>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2024 Your Website</p>
+    <ul>
+      <li><a href="#">Privacy Policy</a></li>
+      <li><a href="#">Terms of Service</a></li>
+    </ul>
+  </footer>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const themeToggle = document.querySelector('.theme-toggle');
+      const currentTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+
+      document.documentElement.setAttribute('data-theme', currentTheme);
+
+      themeToggle.addEventListener('click', () => {
+        const newTheme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+        document.documentElement.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+      });
+    });
+
+  </script>
+</body>
+
+</html>
