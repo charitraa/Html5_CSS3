@@ -8,7 +8,6 @@
   <link href="styles.css" rel="stylesheet">
   <script src="https://kit.fontawesome.com/49b6b027f2.js" crossorigin="anonymous"></script>
   <style>
-    /* Additional styling if necessary */
     .hidden-menu {
       display: none;
     }
@@ -19,7 +18,7 @@
 <body>
   <div class="bg-white">
     <header class="absolute inset-x-0 top-0 z-50 " style="background-color: #314553;">
-      <nav class=" flex items-center justify-between p-6 lg:px-8" aria-label="Global">
+      <nav class=" flex items-center justify-between p-5 lg:px-8" aria-label="Global">
         <div class="flex lg:flex-1">
           <a href="#" class="-m-1.5 p-1.5">
             <span class="sr-only">Your Company</span>
@@ -28,7 +27,7 @@
         </div>
         <div class="flex lg:hidden">
           <button id="open-menu-button" type="button"
-            class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+            class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-white">
             <span class="sr-only">Open main menu</span>
             <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
               aria-hidden="true">
@@ -47,9 +46,9 @@
               aria-hidden="true">&rarr;</span></a>
         </div>
       </nav>
-      <!-- Mobile menu, show/hide based on menu open state. -->
+
       <div id="mobile-menu" class="lg:hidden hidden-menu" role="dialog" aria-modal="true">
-        <!-- Background backdrop, show/hide based on slide-over state. -->
+
         <div class="fixed inset-0 z-50"></div>
         <div
           class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
@@ -70,17 +69,17 @@
             <div class="-my-6 divide-y divide-gray-500/10">
               <div class="space-y-2 py-6">
                 <a href="#"
-                  class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7  text-white hover:bg-gray-50">Home</a>
+                  class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7  text-gray-600 hover:bg-gray-50">Home</a>
                 <a href="#"
-                  class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7  text-white hover:bg-gray-50">Product</a>
+                  class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7  text-gray-600 hover:bg-gray-50">Product</a>
                 <a href="#"
-                  class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7  text-white hover:bg-gray-50">Reviews</a>
+                  class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7  text-gray-600 hover:bg-gray-50">Reviews</a>
                 <a href="#"
-                  class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7  text-white hover:bg-gray-50">Contact</a>
+                  class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7  text-gray-600 hover:bg-gray-50">Contact</a>
               </div>
               <div class="py-6">
                 <a href="#"
-                  class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7  text-white hover:bg-gray-50">Log
+                  class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7  text-gray-600 hover:bg-gray-50">Log
                   in</a>
               </div>
             </div>
@@ -112,20 +111,6 @@
     </div>
   </div>
 
-  <!--
-    This example requires some changes to your config:
-    
-    ```
-    // tailwind.config.js
-    module.exports = {
-      // ...
-      plugins: [
-        // ...
-        require('@tailwindcss/aspect-ratio'),
-      ],
-    }
-    ```
-  -->
   <div class="bg-white">
     <div class="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
       <h2 class="text-2xl font-bold tracking-tight text-gray-900">Customers also purchased</h2>
@@ -134,8 +119,7 @@
         <div class="group relative">
           <div
             class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
-            <img src="https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg"
-              alt="Front of men&#039;s Basic Tee in black."
+            <img src="../assest/c7950405d48143d478a519648eab5785.jpg" alt="Front of men&#039;s Basic Tee in black."
               class="h-full w-full object-cover object-center lg:h-full lg:w-full">
           </div>
           <div class="mt-4 flex justify-between">
@@ -151,24 +135,169 @@
             <p class="text-sm font-medium text-gray-900">$35</p>
           </div>
         </div>
-
-        <!-- More products... -->
+        <div class="group relative">
+          <div
+            class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
+            <img src="../assest/27547d3b3780d91df675ccb0fc854553.jpg" alt="Front of men&#039;s Basic Tee in black."
+              class="h-full w-full object-cover object-center lg:h-full lg:w-full">
+          </div>
+          <div class="mt-4 flex justify-between">
+            <div>
+              <h3 class="text-sm text-gray-700">
+                <a href="#">
+                  <span aria-hidden="true" class="absolute inset-0"></span>
+                  Basic Tee
+                </a>
+              </h3>
+              <p class="mt-1 text-sm text-gray-500">Black</p>
+            </div>
+            <p class="text-sm font-medium text-gray-900">$35</p>
+          </div>
+        </div>
+        <div class="group relative">
+          <div
+            class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
+            <img src="../assest/2b951f0e6c9e5ceb76f877868069844f.jpg" alt="Front of men&#039;s Basic Tee in black."
+              class="h-full w-full object-cover object-center lg:h-full lg:w-full">
+          </div>
+          <div class="mt-4 flex justify-between">
+            <div>
+              <h3 class="text-sm text-gray-700">
+                <a href="#">
+                  <span aria-hidden="true" class="absolute inset-0"></span>
+                  Basic Tee
+                </a>
+              </h3>
+              <p class="mt-1 text-sm text-gray-500">Black</p>
+            </div>
+            <p class="text-sm font-medium text-gray-900">$35</p>
+          </div>
+        </div>
+        <div class="group relative">
+          <div
+            class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
+            <img src="../assest/2f2a219be88450345b75e668604d22d1.jpg" alt="Front of men&#039;s Basic Tee in black."
+              class="h-full w-full object-cover object-center lg:h-full lg:w-full">
+          </div>
+          <div class="mt-4 flex justify-between">
+            <div>
+              <h3 class="text-sm text-gray-700">
+                <a href="#">
+                  <span aria-hidden="true" class="absolute inset-0"></span>
+                  Basic Tee
+                </a>
+              </h3>
+              <p class="mt-1 text-sm text-gray-500">Black</p>
+            </div>
+            <p class="text-sm font-medium text-gray-900">$35</p>
+          </div>
+        </div>
+        <div class="group relative">
+          <div
+            class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
+            <img src="../assest/3a1673116bf8dddbe45bf22a705a614d.jpg" alt="Front of men&#039;s Basic Tee in black."
+              class="h-full w-full object-cover object-center lg:h-full lg:w-full">
+          </div>
+          <div class="mt-4 flex justify-between">
+            <div>
+              <h3 class="text-sm text-gray-700">
+                <a href="#">
+                  <span aria-hidden="true" class="absolute inset-0"></span>
+                  Basic Tee
+                </a>
+              </h3>
+              <p class="mt-1 text-sm text-gray-500">Black</p>
+            </div>
+            <p class="text-sm font-medium text-gray-900">$35</p>
+          </div>
+        </div>
+        <div class="group relative">
+          <div
+            class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
+            <img src="../assest/5d9e5e235cec1ff9d9606d9d5298fd6b.jpg" alt="Front of men&#039;s Basic Tee in black."
+              class="h-full w-full object-cover object-center lg:h-full lg:w-full">
+          </div>
+          <div class="mt-4 flex justify-between">
+            <div>
+              <h3 class="text-sm text-gray-700">
+                <a href="#">
+                  <span aria-hidden="true" class="absolute inset-0"></span>
+                  Basic Tee
+                </a>
+              </h3>
+              <p class="mt-1 text-sm text-gray-500">Black</p>
+            </div>
+            <p class="text-sm font-medium text-gray-900">$35</p>
+          </div>
+        </div>
+        <div class="group relative">
+          <div
+            class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
+            <img src="../assest/a8337f50ffaf22a9f4c350ed63362ec8.jpg" alt="Front of men&#039;s Basic Tee in black."
+              class="h-full w-full object-cover object-center lg:h-full lg:w-full">
+          </div>
+          <div class="mt-4 flex justify-between">
+            <div>
+              <h3 class="text-sm text-gray-700">
+                <a href="#">
+                  <span aria-hidden="true" class="absolute inset-0"></span>
+                  Basic Tee
+                </a>
+              </h3>
+              <p class="mt-1 text-sm text-gray-500">Black</p>
+            </div>
+            <p class="text-sm font-medium text-gray-900">$35</p>
+          </div>
+        </div>
+        <div class="group relative">
+          <div
+            class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
+            <img src="../assest/a8af3e4ce1c255216a57856efb5f2cc1.jpg" alt="Front of men&#039;s Basic Tee in black."
+              class="h-full w-full object-cover object-center lg:h-full lg:w-full">
+          </div>
+          <div class="mt-4 flex justify-between">
+            <div>
+              <h3 class="text-sm text-gray-700">
+                <a href="#">
+                  <span aria-hidden="true" class="absolute inset-0"></span>
+                  Basic Tee
+                </a>
+              </h3>
+              <p class="mt-1 text-sm text-gray-500">Black</p>
+            </div>
+            <p class="text-sm font-medium text-gray-900">$35</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 
-
-  <!-- Customer Reviews Section -->
   <section id="reviews" class="bg-gray-100 p-8">
-    <h2 class="text-2xl md:text-4xl font-bold text-center">Customer Reviews</h2>
-    <div class="mt-4">
-      <div class="bg-white p-4 rounded shadow-md">
+    <h2 class="text-2xl md:text-4xl font-bold text-center mb-8">Customer Reviews</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="bg-white p-6 rounded-lg shadow-md">
         <p class="italic">"GizmoMax has transformed my daily routine. Highly recommend!"</p>
-        <p class="text-right mt-2">- Jane Doe</p>
+        <p class="text-right mt-2 font-semibold">- Jane Doe</p>
       </div>
-      <div class="bg-white p-4 rounded shadow-md mt-4">
+      <div class="bg-white p-6 rounded-lg shadow-md">
         <p class="italic">"The best gadget I have ever purchased."</p>
-        <p class="text-right mt-2">- John Smith</p>
+        <p class="text-right mt-2 font-semibold">- John Smith</p>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-md">
+        <p class="italic">"Amazing features and great performance. Five stars!"</p>
+        <p class="text-right mt-2 font-semibold">- Emily Johnson</p>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-md">
+        <p class="italic">"Exceptional quality and customer service. Will buy again."</p>
+        <p class="text-right mt-2 font-semibold">- Michael Brown</p>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-md">
+        <p class="italic">"GizmoMax is a game-changer. Worth every penny!"</p>
+        <p class="text-right mt-2 font-semibold">- Sarah Williams</p>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-md">
+        <p class="italic">"Highly satisfied with my purchase. Highly recommend!"</p>
+        <p class="text-right mt-2 font-semibold">- David Wilson</p>
       </div>
     </div>
   </section>
@@ -215,16 +344,10 @@
               <label for="country" class="sr-only">Country</label>
               <select id="country" name="country"
                 class="h-full rounded-md border-0 bg-transparent bg-none py-0 pl-4 pr-9 text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm">
-                <option>US</option>
-                <option>CA</option>
-                <option>EU</option>
+                <option>NEP</option>
+                <option>IND</option>
+                <option>NEP</option>
               </select>
-              <svg class="pointer-events-none absolute right-3 top-0 h-full w-5 text-gray-400" viewBox="0 0 20 20"
-                fill="currentColor" aria-hidden="true">
-                <path fill-rule="evenodd"
-                  d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
-                  clip-rule="evenodd" />
-              </svg>
             </div>
             <input type="tel" name="phone-number" id="phone-number" autocomplete="tel"
               class="block w-full rounded-md border-0 px-3.5 py-2 pl-20 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
@@ -239,12 +362,11 @@
         </div>
         <div class="flex gap-x-4 sm:col-span-2">
           <div class="flex h-6 items-center">
-            <!-- Enabled: "bg-indigo-600", Not Enabled: "bg-gray-200" -->
+
             <button type="button"
               class="flex w-8 flex-none cursor-pointer rounded-full bg-gray-200 p-px ring-1 ring-inset ring-gray-900/5 transition-colors duration-200 ease-in-out focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
               role="switch" aria-checked="false" aria-labelledby="switch-1-label">
               <span class="sr-only">Agree to policies</span>
-              <!-- Enabled: "translate-x-3.5", Not Enabled: "translate-x-0" -->
               <span aria-hidden="true"
                 class="h-4 w-4 translate-x-0 transform rounded-full bg-white shadow-sm ring-1 ring-gray-900/5 transition duration-200 ease-in-out"></span>
             </button>
@@ -264,7 +386,7 @@
   </div>
 
 
-  <!-- Footer Section -->
+
   <footer class=" text-white text-center p-4" style="background-color: #314553;">
     <div class="mt-2">
       <a href="#" class="mx-2" style="font-size: 24px;"><i class="fa-brands fa-facebook"></i></a>
